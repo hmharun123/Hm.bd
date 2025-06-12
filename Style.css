@@ -1,1 +1,220 @@
 
+<style>
+/* প্রি-লোডার */
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #fff url('https://i.gifer.com/YCZH.gif') no-repeat center;
+  z-index: 9999;
+}
+
+/* গুগল সার্চ বক্স */
+.search-bar {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+.search-bar input {
+  padding: 5px;
+}
+.search-bar button {
+  padding: 5px;
+}
+
+/* থ্রি ডট মেনু */
+.three-dot-menu {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.three-dot-menu div {
+  width: 8px;
+  height: 8px;
+  background: #333;
+  margin: 3px;
+  border-radius: 50%;
+}
+
+/* মেনু ন্যাভিগেশন */
+.menu {
+  position: fixed;
+  top: 40px;
+  right: 10px;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 999;
+}
+.menu.show {
+  display: block;
+}
+.menu a {
+  display: block;
+  margin: 5px 0;
+  color: #333;
+  text-decoration: none;
+}
+
+/* হিরো সেকশন */
+#hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  text-align: center;
+}
+#hero h1 {
+  font-size: 2em;
+}
+#hero .btn {
+  margin: 10px;
+  padding: 10px 20px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* সেকশন স্টাইল */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* পোর্টফোলিও */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portfolio-item {
+  margin: 10px;
+  width: 150px;
+}
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* টেস্টিমোনিয়াল স্লাইডার */
+.testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+.testimonial {
+  min-width: 250px;
+  padding: 15px;
+  background: #f2f2f2;
+  border-radius: 10px;
+}
+
+/* FAQ */
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px 0;
+}
+details p {
+  margin: 0 0 10px;
+}
+
+/* কাউন্টার */
+.counter-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.counter-container div {
+  text-align: center;
+}
+
+/* ভিডিও এমবেড */
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.video-container iframe {
+  width: 300px;
+  height: 200px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* অর্ডার ফর্ম */
+form input, form textarea {
+  display: block;
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+form button {
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* গ্যালারি বাটন */
+#gallery .btn {
+  background: #555;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* সার্টিফিকেট ছবি */
+#certificates img {
+  width: 300px;
+  max-width: 90%;
+  margin: 10px auto;
+}
+
+/* সোশ্যাল মিডিয়া বাটন */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social-links a {
+  padding: 10px 15px;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.facebook { background: #3b5998; }
+.tiktok { background: #000; }
+.youtube { background: #FF0000; }
+
+/* ব্যাক টু টপ */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* রেস্পন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+  .portfolio-grid, .video-container, .counter-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
