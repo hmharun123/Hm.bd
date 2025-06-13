@@ -292,7 +292,49 @@ form button {
 .btn-portfolio.red:hover {
   background-color: #b02a37;
 }
-
+/* Three Dot Menu Button Style */
+.menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 1001;
+  transition: background 0.3s ease;
+}
+.menu-button:hover {
+  background: #555;
+}
+/* Hidden Menu Content */
+.menu-content {
+  display: none;
+  position: fixed;
+  top: 65px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: 220px;
+  padding: 10px 0;
+}
+.menu-content a {
+  display: block;
+  color: #333;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+.menu-content a:hover {
+  background-color: #f0f0f0;
+}
 </style>
 <head>
 <!-- Font Awesome CDN -->
