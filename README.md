@@ -17,18 +17,18 @@
   background: #fff url('https://i.gifer.com/YCZH.gif') no-repeat center;
   z-index: 9999;
 }
-/* গুগল সার্চ বক্স */
-.search-bar {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 1000;
+.search-bar form {
+  display: flex;
 }
-.search-bar input {
-  padding: 5px;
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 8px;
 }
 .search-bar button {
-  padding: 5px;
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 8px 12px;
 }
 /* থ্রি ডট মেনু */
 .three-dot-menu {
