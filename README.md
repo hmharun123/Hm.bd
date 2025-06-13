@@ -215,6 +215,99 @@ form button {
     flex-direction: column;
     align-items: center;
   }  
+  .social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin-top: 15px;
+}
+
+.btn-social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+/* Platform-specific colors */
+.facebook { background: #3b5998; }
+.youtube { background: #ff0000; }
+.whatsapp { background: #25d366; }
+.instagram { background: #e1306c; }
+.tiktok { background: #000000; }
+.fiverr { background: #1dbf73; }
+
+.btn-social i {
+  font-size: 20px;
+}
+
+@media (max-width: 480px) {
+  .btn-social {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .btn-social i {
+    font-size: 18px;
+  }
+.portfolio-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+  max-width: 500px;
+}
+
+/* Common button style */
+.btn-portfolio {
+  display: inline-block;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+/* Button colors */
+.btn-portfolio.blue {
+  background-color: #007BFF;
+}
+.btn-portfolio.blue:hover {
+  background-color: #0056b3;
+}
+
+.btn-portfolio.green {
+  background-color: #28a745;
+}
+.btn-portfolio.green:hover {
+  background-color: #1e7e34;
+}
+
+.btn-portfolio.orange {
+  background-color: #fd7e14;
+}
+.btn-portfolio.orange:hover {
+  background-color: #e46000;
+}
+
+.btn-portfolio.red {
+  background-color: #dc3545;
+}
+.btn-portfolio.red:hover {
+  background-color: #b02a37;
+}
+</style>
+
 </style>
 
 <!-- Font Awesome CDN -->
