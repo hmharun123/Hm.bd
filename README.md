@@ -248,7 +248,7 @@ form button {
     <h1>Hello, I'm <span class="typed-text"></span></h1>
     <p>Welcome to my official site.</p>
     <a href="#portfolio" class="btn">View Portfolio</a>
-    <a href="cv.pdf" download class="btn">Download CV</a>
+    <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download class="btn">Download CV</a>
   </section>
 
   <!-- Portfolio -->
