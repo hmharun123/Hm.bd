@@ -259,7 +259,54 @@ form button {
     vertical-align: middle;
     margin-right: 6px;
   }
-</style>
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+
+  .btn-social i {
+    margin-right: 8px;
+  }
+
+  .facebook { background-color: #3b5998; }
+  .youtube { background-color: #FF0000; }
+  .whatsapp { background-color: #25D366; }
+  .instagram { background-color: #e1306c; }
+  .tiktok { background-color: #000; }
+  .fiverr {
+    background-color: #1dbf73;
+    display: flex;
+    gap: 10px;
+  }
+
+  .fiverr-icon {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    padding: 2px;
+  }
+
+  /* Responsive for mobile */
+  @media (max-width: 480px) {
+    .btn-social {
+      font-size: 14px;
+      padding: 10px;
+    }
 </style>
 <body onload="preloader()">
   <!-- Preloader -->
@@ -335,6 +382,34 @@ form button {
       <div><span class="count" data-target="5">0</span><p>Years</p></div>
     </div>
   </section>
+
+  <!-- Social Media Links -->
+<section class="social-section" style="padding: 20px; background: #f0f0f0;">
+  <h2>Follow Me on Social Media</h2>
+  <div class="social-buttons">
+    <a href="https://www.facebook.com/share/r/1BcEg68nzy/" class="btn-social facebook" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i> Facebook
+    </a>
+    <a href="https://youtube.com/@mdharun-n6j" class="btn-social youtube" target="_blank">
+      <i class="fa-brands fa-youtube"></i> YouTube
+    </a>
+    <a href="https://wa.me/8801648131500?text=Hi,%20I%20want%20to%20contact%20you" class="btn-social whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+    <a href="https://www.instagram.com/p/DIeAfFXT_oO/" class="btn-social instagram" target="_blank">
+      <i class="fa-brands fa-instagram"></i> Instagram
+    </a>
+    <a href="https://www.tiktok.com/@user6071584366187" class="btn-social tiktok" target="_blank">
+      <i class="fa-brands fa-tiktok"></i> TikTok
+    </a>
+    <a href="https://www.fiverr.com/s/dDlW3G3" class="btn-social fiverr" target="_blank">
+      <img src="fiverr-logo.png" class="fiverr-icon" alt="Fiverr"> Fiverr
+    </a>
+  </div>
+</section>
+
+<!-- Font Awesome (for icons) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
    <!-- Embedded TikTok & YouTube -->
   <section id="videos">
