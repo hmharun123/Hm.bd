@@ -348,11 +348,10 @@ form button {
     <a href="#contact">Contact</a>
   </nav>
 
-  <div class="container">
-    <img src="harun.jpg" alt="Harun's Photo" class="profile">
-
   <!-- Hero Section -->
   <section id="hero">
+    <div class="container">
+    <img src="harun.jpg" alt="Harun's Photo" class="profile">
     <h1>Hello, I'm <span class="typed-text"></span></h1>
     <p>Welcome to my official site.</p>
     <a href="#portfolio" class="btn">View Portfolio</a>
