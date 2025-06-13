@@ -333,20 +333,83 @@ form button {
       <input type="text" name="q" placeholder="Search Google..."><button type="submit">Search</button>
     </form>
   </div>
+  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Md. Harun Or Rashid</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
 
-  <!-- Three Dot Menu -->
-  <div class="three-dot-menu" onclick="toggleMenu()">
-    <div></div><div></div><div></div>
-  </div>
-  <nav id="mainMenu" class="menu">
-    <a href="#hero">Home</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#faq">FAQ</a>
-    <a href="#order">Order</a>
-    <a href="#contact">Contact</a>
+  <header>
+    <h1>Md. Harun Or Rashid</h1>
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </header>
+
+  <nav class="menu-content" id="menu">
+    <a href="#" onclick="showSection('profile')">📱 Profile</a>
+    <a href="#" onclick="showSection('privacy')">🔐 Privacy Policy</a>
+    <a href="#" onclick="showSection('contact')">📞 Contact</a>
+    <a href="#" onclick="showSection('about')">👨‍💻 About</a>
+    <a href="#" onclick="showSection('settings')">⚙️ Settings</a>
+    <a href="#" onclick="showSection('certificates')">📄 Certificates</a>
+    <a href="mailto:hmharun0131@gmail.com">📧 Email</a>
+    <a href="cv/HM_HARUN_CV.pdf" download>⬇️ Download CV</a>
+    <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
+    <a href="#" onclick="showSection('tutorial')">📚 Tutorial</a>
   </nav>
+
+  <main>
+    <section id="profile" class="section active">
+      <h2>📱 Profile</h2>
+      <p>Welcome to my portfolio! I am Md. Harun Or Rashid, a passionate web developer.</p>
+    </section>
+
+    <section id="privacy" class="section">
+      <h2>🔐 Privacy Policy</h2>
+      <p>Your data is safe. We don’t collect personal data without your permission.</p>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>📞 Contact</h2>
+      <p>You can contact me at <a href="mailto:hmharun0131@gmail.com">hmharun0131@gmail.com</a>.</p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>👨‍💻 About</h2>
+      <p>I specialize in front-end development, HTML, CSS, JavaScript, and UI design.</p>
+    </section>
+
+    <section id="settings" class="section">
+      <h2>⚙️ Settings</h2>
+      <p>Customize your experience here. (Feature under development)</p>
+    </section>
+
+    <section id="certificates" class="section">
+      <h2>📄 Certificates</h2>
+      <p>Here you will find my certifications and achievements. (Coming soon)</p>
+    </section>
+
+    <section id="tutorial" class="section">
+      <h2>📚 Tutorial</h2>
+      <p>Read my tutorials on web development and design. (Will be updated regularly)</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    &copy; 2025 Md. Harun Or Rashid
+  </footer>
+
+  <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
   <!-- Hero Section -->
   <section id="hero">
