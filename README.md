@@ -390,7 +390,7 @@ form button {
   <div class="container">
     <!-- Logo -->
     <div style="margin-top: 20px;">
-      <img src="harun-logo.png" alt="Harun Logo" style="width: 180px; border-radius: 15px;">
+      <img src="file_00000000758861f884606a82c460dc7a (1).png" alt="Harun Logo" style="width: 180px; border-radius: 15px;">
     </div>
 
     <!-- Profile Photo and Name -->
