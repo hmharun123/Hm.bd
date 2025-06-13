@@ -292,6 +292,52 @@ form button {
 .btn-portfolio.red:hover {
   background-color: #b02a37;
 }
+  /* Three Dot Menu Style */
+.three-dot-menu {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.menu-button {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex-direction: column;
+  padding: 10px;
+}
+
+.menu-content a {
+  text-decoration: none;
+  color: #333;
+  padding: 8px 12px;
+  display: block;
+  transition: background 0.3s;
+  font-family: Arial, sans-serif;
+}
+
+.menu-content a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-content.show {
+  display: block;
+}
 </style>
 <head>
 <!-- Font Awesome CDN -->
