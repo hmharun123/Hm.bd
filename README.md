@@ -65,6 +65,26 @@
   color: #333;
   text-decoration: none;
 }
+    .logo-section {
+  text-align: center;
+  margin-top: 30px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.logo-section img {
+  width: 180px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+.logo-section img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 /* হিরো সেকশন */
 #hero {
   height: 100vh;
