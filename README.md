@@ -378,15 +378,7 @@ form button {
   </div>
 </div>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <h1>Hello, I'm <span class="typed-text"></span></h1>
-    <p>Welcome to my official site.</p>
-    <a href="#portfolio" class="btn">View Portfolio</a>
-    <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download class="btn">Download CV</a>
-  </section>
-
-  <section id="about" style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
+<section id="about" style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
   <h2>About Me</h2>
   <p><strong>Name:</strong> Md. Harun or Rosid</p>
   <p><strong>Profession:</strong> Freelancer</p>
@@ -404,6 +396,14 @@ form button {
     I have successfully completed a professional data entry course and have practical experience working on Fiverr and other platforms. 
     My aim is to provide accurate and timely services to clients worldwide.
   </p>
+ 
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Hello, I'm <span class="typed-text"></span></h1>
+    <p>Welcome to my official site.</p>
+    <a href="#portfolio" class="btn">View Portfolio</a>
+    <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download class="btn">Download CV</a>
+  </section>
 
   <!-- Portfolio -->
   <section id="portfolio">
