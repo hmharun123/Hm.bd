@@ -216,91 +216,6 @@ form button {
     align-items: center;
   }
   
-.section {
-  padding: 20px;
-  background-color: #f4f8fb;
-  border-radius: 10px;
-  max-width: 800px;
-  margin: 30px auto;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.section h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-.section p {
-  margin: 5px 0;
-  font-size: 16px;
-  color: #333;
-}
-.social-order-section {
-  text-align: center;
-  padding: 20px;
-}
-
-.social-order-section h2,
-.social-order-section h3 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-.order-buttons,
-.social-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 30px;
-  color: #fff;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  transition: transform 0.2s ease;
-}
-
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* Individual Button Colors */
-.email {
-  background-color: #007BFF;
-}
-
-.whatsapp {
-  background-color: #25D366;
-}
-
-.fiverr {
-  background-color: #1DBF73;
-}
-
-.facebook {
-  background-color: #3b5998;
-}
-
-.instagram {
-  background-color: #E1306C;
-}
-
-.tiktok {
-  background-color: #010101;
-}
-
-.whatsapp-alt {
-  background-color: #128C7E;
-}
 </style>
 <body onload="preloader()">
   <!-- Preloader -->
@@ -377,25 +292,7 @@ form button {
     </div>
   </section>
 
-  <!-- Social Media Links -->
-<section class="links">
-  <a href="https://www.facebook.com/share/r/1BcEg68nzy/" class="btn blue" target="_blank">
-    <i class="fa-brands fa-facebook-f"></i> Facebook
-  </a>
-  <a href="https://youtube.com/@mdharun-n6j" class="btn red" target="_blank">
-    <i class="fa-brands fa-youtube"></i> YouTube
-  </a>
-  <a href="https://wa.me/8801648131500?text=Hi,%20I%20want%20to%20contact%20you" class="btn darkgreen" target="_blank">
-    <i class="fa-brands fa-whatsapp"></i> WhatsApp
-  </a>
-  <a href="https://www.instagram.com/p/DIeAfFXT_oO/" class="btn purple" target="_blank">
-    <i class="fa-brands fa-instagram"></i> Instagram
-  </a>
-  <a href="https://www.tiktok.com/@user6071584366187" class="btn pink" target="_blank">
-    <i class="fa-brands fa-tiktok"></i> TikTok
-  </a>
-  
-  <!-- Embedded TikTok & YouTube -->
+   <!-- Embedded TikTok & YouTube -->
   <section id="videos">
     <h2>My Videos</h2>
     <div class="video-container">
