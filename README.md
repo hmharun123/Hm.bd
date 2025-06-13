@@ -353,7 +353,26 @@ form button {
     </form>
   </div>
   
+<header>
+  <h1>মো: হামজা</h1>
+  <button class="menu-button" onclick="toggleMenu()">
+    <i class="fas fa-ellipsis-v"></i>
+  </button>
+</header>
 
+<!-- Hidden Menu -->
+<nav class="menu-content" id="menu">
+  <a href="#">📱 Profile</a>
+  <a href="#">🔐 Privacy Policy</a>
+  <a href="#">📞 Contact</a>
+  <a href="#">👨‍💻 About</a>
+  <a href="#">⚙️ Settings</a>
+  <a href="#">📄 Certificates</a>
+  <a href="mailto:hmharun0131@gmail.com">📧 Email</a>
+  <a href="cv/HM_HARUN_CV.pdf" download>⬇️ Download CV</a>
+  <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
+  <a href="#">📚 Tutorial</a>
+</nav>
     <section id="profile" class="section active">
       <h2>📱 Profile</h2>
       <p>Welcome to my portfolio! I am Md. Harun Or Rashid, a passionate web developer.</p>
