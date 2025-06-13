@@ -303,7 +303,7 @@ form button {
     <h2>Order Now</h2>
     <form action="https://docs.google.com/forms/d/e/your-google-form-id/formResponse" method="POST" target="_blank">
       <input type="text" name="entry.123456" placeholder="Your Name" required>
-      <input type="email" name="entry.654321" placeholder="Your Email" required>
+      <input type="harunrm900@gmail.com" name="entry.654321" placeholder="harunrm900@gmail.com" required>
       <textarea name="entry.112233" placeholder="Your Order Details" required></textarea>
       <button type="submit">Submit</button>
     </form>
@@ -318,8 +318,8 @@ form button {
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-    <p>Phone: +8801234567890</p>
+    <p>Email: <a href="mailto:harunrm900@gmail.com">harunrm900@gmail.com</a></p>
+    <p>Phone: +8801648131500</p>
     <p>Address: Manikganj, Bangladesh</p>
   </section>
 
