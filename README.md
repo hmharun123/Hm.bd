@@ -373,44 +373,7 @@ form button {
   <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
   <a href="#">📚 Tutorial</a>
 </nav>
-    <section id="profile" class="section active">
-      <h2>📱 Profile</h2>
-      <p>Welcome to my portfolio! I am Md. Harun Or Rashid, a passionate web developer.</p>
-    </section>
-
-    <section id="privacy" class="section">
-      <h2>🔐 Privacy Policy</h2>
-      <p>Your data is safe. We don’t collect personal data without your permission.</p>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>📞 Contact</h2>
-      <p>You can contact me at <a href="mailto:hmharun0131@gmail.com">hmharun0131@gmail.com</a>.</p>
-    </section>
-
-    <section id="about" class="section">
-      <h2>👨‍💻 About</h2>
-      <p>I specialize in front-end development, HTML, CSS, JavaScript, and UI design.</p>
-    </section>
-
-    <section id="settings" class="section">
-      <h2>⚙️ Settings</h2>
-      <p>Customize your experience here. (Feature under development)</p>
-    </section>
-
-    <section id="certificates" class="section">
-      <h2>📄 Certificates</h2>
-      <p>Here you will find my certifications and achievements. (Coming soon)</p>
-    </section>
-
-    <section id="tutorial" class="section">
-      <h2>📚 Tutorial</h2>
-      <p>Read my tutorials on web development and design. (Will be updated regularly)</p>
-    </section>
-  </main>
-</body>
-</html>
-
+    
   <!-- Hero Section -->
   <section id="hero">
     <h1>Hello, I'm <span class="typed-text"></span></h1>
