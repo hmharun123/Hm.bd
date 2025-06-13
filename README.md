@@ -607,4 +607,18 @@ form button {
       updateCount();
     });
   </script>
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+  }
+
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('menu');
+    const button = document.querySelector('.menu-button');
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
+</script>
 </body>
