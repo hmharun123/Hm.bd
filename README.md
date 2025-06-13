@@ -17,7 +17,6 @@
   background: #fff url('https://i.gifer.com/YCZH.gif') no-repeat center;
   z-index: 9999;
 }
-
 /* গুগল সার্চ বক্স */
 .search-bar {
   position: fixed;
@@ -31,7 +30,6 @@
 .search-bar button {
   padding: 5px;
 }
-
 /* থ্রি ডট মেনু */
 .three-dot-menu {
   position: fixed;
@@ -47,7 +45,6 @@
   margin: 3px;
   border-radius: 50%;
 }
-
 /* মেনু ন্যাভিগেশন */
 .menu {
   position: fixed;
@@ -68,7 +65,6 @@
   color: #333;
   text-decoration: none;
 }
-
 /* হিরো সেকশন */
 #hero {
   height: 100vh;
@@ -90,13 +86,11 @@
   text-decoration: none;
   border-radius: 5px;
 }
-
 /* সেকশন স্টাইল */
 section {
   padding: 40px 20px;
   text-align: center;
 }
-
 /* পোর্টফোলিও */
 .portfolio-grid {
   display: flex;
@@ -111,7 +105,6 @@ section {
   width: 100%;
   border-radius: 8px;
 }
-
 /* টেস্টিমোনিয়াল স্লাইডার */
 .testimonial-slider {
   display: flex;
@@ -124,7 +117,6 @@ section {
   background: #f2f2f2;
   border-radius: 10px;
 }
-
 /* FAQ */
 details summary {
   cursor: pointer;
@@ -134,7 +126,6 @@ details summary {
 details p {
   margin: 0 0 10px;
 }
-
 /* কাউন্টার */
 .counter-container {
   display: flex;
@@ -144,7 +135,6 @@ details p {
 .counter-container div {
   text-align: center;
 }
-
 /* ভিডিও এমবেড */
 .video-container {
   display: flex;
@@ -158,7 +148,6 @@ details p {
   border: none;
   border-radius: 10px;
 }
-
 /* অর্ডার ফর্ম */
 form input, form textarea {
   display: block;
@@ -174,21 +163,18 @@ form button {
   border: none;
   cursor: pointer;
 }
-
 /* গ্যালারি বাটন */
 #gallery .btn {
   background: #555;
   color: white;
   padding: 10px 20px;
 }
-
 /* সার্টিফিকেট ছবি */
 #certificates img {
   width: 300px;
   max-width: 90%;
   margin: 10px auto;
 }
-
 /* সোশ্যাল মিডিয়া বাটন */
 .social-links {
   display: flex;
@@ -203,8 +189,8 @@ form button {
 }
 .facebook { background: #3b5998; }
 .tiktok { background: #000; }
-.youtube { background: #FF0000; }
-
+.youtube { background: #FF0000; 
+}
 /* ব্যাক টু টপ */
 #backToTop {
   position: fixed;
@@ -218,7 +204,6 @@ form button {
   cursor: pointer;
   z-index: 1000;
 }
-
 /* রেস্পন্সিভ ডিজাইন */
 @media (max-width: 768px) {
   .portfolio-grid, .video-container, .counter-container {
@@ -232,7 +217,6 @@ form button {
   max-width: 400px;
   margin-top: 15px;
 }
-
 .btn-social {
   display: flex;
   align-items: center;
@@ -246,7 +230,6 @@ form button {
   border-radius: 8px;
   transition: background 0.3s ease;
 }
-
 /* Platform-specific colors */
 .facebook { background: #3b5998; }
 .youtube { background: #ff0000; }
@@ -254,18 +237,16 @@ form button {
 .instagram { background: #e1306c; }
 .tiktok { background: #000000; }
 .fiverr { background: #1dbf73; }
-
+}
 .btn-social i {
   font-size: 20px;
 }
-
 @media (max-width: 480px) {
   .btn-social {
     font-size: 14px;
     padding: 10px 15px;
   }
-
-  .btn-social i {
+ .btn-social i {
     font-size: 18px;
   }
 .portfolio-buttons {
@@ -275,7 +256,6 @@ form button {
   margin-top: 15px;
   max-width: 500px;
 }
-
 /* Common button style */
 .btn-portfolio {
   display: inline-block;
@@ -287,7 +267,6 @@ form button {
   transition: background-color 0.3s ease;
   text-align: center;
 }
-
 /* Button colors */
 .btn-portfolio.blue {
   background-color: #007BFF;
@@ -295,21 +274,18 @@ form button {
 .btn-portfolio.blue:hover {
   background-color: #0056b3;
 }
-
 .btn-portfolio.green {
   background-color: #28a745;
 }
 .btn-portfolio.green:hover {
   background-color: #1e7e34;
 }
-
 .btn-portfolio.orange {
   background-color: #fd7e14;
 }
 .btn-portfolio.orange:hover {
   background-color: #e46000;
 }
-
 .btn-portfolio.red {
   background-color: #dc3545;
 }
@@ -321,7 +297,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
 header {
   background: #222;
   color: white;
@@ -330,11 +305,9 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-
 h1 {
   font-size: 18px;
 }
-
 .menu-button {
   background: none;
   border: none;
@@ -342,14 +315,12 @@ h1 {
   font-size: 24px;
   cursor: pointer;
 }
-
 nav.menu-content {
   display: none;
   flex-direction: column;
   background: #333;
   padding: 10px;
 }
-
 nav.menu-content a {
   color: white;
   text-decoration: none;
@@ -357,29 +328,24 @@ nav.menu-content a {
   border-bottom: 1px solid #444;
   transition: background 0.3s;
 }
-
 nav.menu-content a:hover {
   background: #444;
 }
-
 /* Show the menu when active */
 nav.menu-content.show {
   display: flex;
 }
-
 /* Desktop view */
 @media (min-width: 768px) {
   .menu-button {
     display: none;
   }
-
-  nav.menu-content {
+ nav.menu-content {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
   }
-
-  nav.menu-content a {
+ nav.menu-content a {
     border: none;
     padding: 10px 16px;
   }
