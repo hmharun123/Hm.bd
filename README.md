@@ -400,14 +400,6 @@ form button {
       <p>Read my tutorials on web development and design. (Will be updated regularly)</p>
     </section>
   </main>
-
-  <footer class="footer">
-    &copy; 2025 Md. Harun Or Rashid
-  </footer>
-
-  <button id="backToTop" onclick="scrollToTop()">↑</button>
-
-  <script src="script.js"></script>
 </body>
 </html>
 
