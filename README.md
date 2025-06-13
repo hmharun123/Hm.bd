@@ -215,6 +215,91 @@ form button {
     flex-direction: column;
     align-items: center;
   }
+  
+.section {
+  padding: 20px;
+  background-color: #f4f8fb;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 30px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.section p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #333;
+}
+.social-order-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.social-order-section h2,
+.social-order-section h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.order-buttons,
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Individual Button Colors */
+.email {
+  background-color: #007BFF;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.fiverr {
+  background-color: #1DBF73;
+}
+
+.facebook {
+  background-color: #3b5998;
+}
+
+.instagram {
+  background-color: #E1306C;
+}
+
+.tiktok {
+  background-color: #010101;
+}
+
+.whatsapp-alt {
+  background-color: #128C7E;
 }
 </style>
 <body onload="preloader()">
