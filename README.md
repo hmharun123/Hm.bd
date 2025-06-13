@@ -292,7 +292,69 @@ form button {
 .btn-portfolio.red:hover {
   background-color: #b02a37;
 }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
 
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 20px;
+}
+
+.menu-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-content {
+  display: none;
+  flex-direction: column;
+  background-color: #333;
+}
+
+.menu-content a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-bottom: 1px solid #444;
+  transition: background 0.3s;
+}
+
+.menu-content a:hover {
+  background-color: #555;
+}
+
+.menu-content.show {
+  display: flex;
+}
+
+/* Optional: Desktop view - show menu normally */
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+
+  .menu-content {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .menu-content a {
+    border-bottom: none;
+    padding: 12px 15px;
+  }
+}
 </style>
 <head>
 <!-- Font Awesome CDN -->
