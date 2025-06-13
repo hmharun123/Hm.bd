@@ -356,7 +356,28 @@ form button {
       <input type="text" name="q" placeholder="Search Google..."><button type="submit">Search</button>
     </form>
   </div>
-   
+
+   <!-- Three Dot Menu -->
+<div class="three-dot-menu">
+  <button class="menu-button" onclick="toggleMenu()">
+    <i class="fas fa-ellipsis-v"></i>
+  </button>
+  <div class="menu-content" id="mainMenu">
+    <a href="#hero">🏠 Home</a>
+    <a href="#about">👤 Profile</a>
+    <a href="#portfolio">🧩 Projects</a>
+    <a href="#gallery">🖼️ Gallery</a>
+    <a href="#portfolio">📁 Portfolio</a>
+    <a href="#social">🌐 Social Media</a>
+    <a href="#about">ℹ️ About</a>
+    <a href="#settings">⚙️ Settings</a>
+    <a href="#privacy">🔐 Privacy</a>
+    <a href="#contact">📞 Contact</a>
+    <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download>⬇️ Download CV</a>
+    <a href="#order">✉️ Send Message</a>
+  </div>
+</div>
+
   <!-- Hero Section -->
   <section id="hero">
     <h1>Hello, I'm <span class="typed-text"></span></h1>
