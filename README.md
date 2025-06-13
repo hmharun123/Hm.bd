@@ -269,25 +269,6 @@ form button {
     </div>
   </section>
 
-  <!-- Portfolio Section -->
-<section class="section portfolio-section" style="padding: 20px; background: #f5f5f5;">
-  <h2>My Portfolio</h2>
-  <div class="portfolio-buttons">
-    <a href="https://docs.google.com/spreadsheets/d/1FSV3CzDlRSDJHaumYrCcvKFcBKGedUhFU9qPDY6viW4/edit?usp=drivesdk" target="_blank" class="btn btn-green">
-      Sample Data Entry Work
-    </a>
-    <a href="https://drive.google.com/file/d/1xA2EXAMPLE123/view" target="_blank" class="btn btn-blue">
-      Product Listing (Excel)
-    </a>
-    <a href="https://drive.google.com/file/d/1yB3EXAMPLE456/view" target="_blank" class="btn btn-orange">
-      Web Research Sample
-    </a>
-    <a href="https://drive.google.com/file/d/1zC4EXAMPLE789/view" target="_blank" class="btn btn-purple">
-      PDF to Excel Conversion
-    </a>
-  </div>
-</section>
-
   <!-- Testimonials -->
   <section id="testimonials">
     <h2>What Clients Say</h2>
@@ -315,11 +296,6 @@ form button {
       <div><span class="count" data-target="5">0</span><p>Years</p></div>
     </div>
   </section>
-
-<!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<!-- Link to External CSS -->
-<link rel="stylesheet" href="style.css">
 
 <!-- Social Media Section -->
 <section class="social-section" style="padding: 20px; background: #f9f9f9;">
