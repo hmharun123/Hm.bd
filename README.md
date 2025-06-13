@@ -436,7 +436,7 @@ nav.menu-content.show {
     <a href="#" onclick="showSection('settings')">⚙️ Settings</a>
     <a href="#" onclick="showSection('certificates')">📄 Certificates</a>
     <a href="mailto:hmharun0131@gmail.com">📧 Email</a>
-    <a href="cv/HM_HARUN_CV.pdf" download>⬇️ Download CV</a>
+    <a href="cv/Md_Harun_Or_Rashid_CV_Image.pdf" download>⬇️ Download CV</a>
     <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
     <a href="#" onclick="showSection('tutorial')">📚 Tutorial</a>
   </nav>
