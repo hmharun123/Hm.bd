@@ -411,7 +411,49 @@ nav.menu-content.show {
 </head>
 <body>
 
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Three Dot Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Md. Harun Or Rashid</h1>
+    <button class="menu-button" onclick="toggleMenu()">
+      <i class="fas fa-ellipsis-v"></i>
+    </button>
+  </header>
+
+  <nav class="menu-content" id="menu">
+    <a href="#" onclick="showSection('profile')">📱 Profile</a>
+    <a href="#" onclick="showSection('privacy')">🔐 Privacy Policy</a>
+    <a href="#" onclick="showSection('contact')">📞 Contact</a>
+    <a href="#" onclick="showSection('about')">👨‍💻 About</a>
+    <a href="#" onclick="showSection('settings')">⚙️ Settings</a>
+    <a href="#" onclick="showSection('certificates')">📄 Certificates</a>
+    <a href="mailto:hmharun0131@gmail.com">📧 Email</a>
+    <a href="cv/HM_HARUN_CV.pdf" download>⬇️ Download CV</a>
+    <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
+    <a href="#" onclick="showSection('tutorial')">📚 Tutorial</a>
+  </nav>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('show');
+    }
+
+    function showSection(sectionId) {
+      alert('Show section: ' + sectionId);
+    }
+  </script>
+
+</body>
+</html>
   <main>
     <section id="profile" class="section active">
       <h2>📱 Profile</h2>
