@@ -307,6 +307,33 @@ form button {
       font-size: 14px;
       padding: 10px;
     }
+  .portfolio-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background 0.3s;
+  }
+
+  .btn-green { background-color: #28a745; }
+  .btn-blue { background-color: #007bff; }
+  .btn-orange { background-color: #fd7e14; }
+  .btn-purple { background-color: #6f42c1; }
+
+  .btn:hover {
+    opacity: 0.9;
+  }
+</style>
+    
 </style>
 <body onload="preloader()">
   <!-- Preloader -->
@@ -354,6 +381,25 @@ form button {
       <div class="portfolio-item"><img src="312.jpg" alt="Web"><p>Web Design</p></div>
     </div>
   </section>
+
+  <!-- Portfolio Section -->
+<section class="section portfolio-section" style="padding: 20px; background: #f5f5f5;">
+  <h2>My Portfolio</h2>
+  <div class="portfolio-buttons">
+    <a href="https://docs.google.com/spreadsheets/d/1FSV3CzDlRSDJHaumYrCcvKFcBKGedUhFU9qPDY6viW4/edit?usp=drivesdk" target="_blank" class="btn btn-green">
+      Sample Data Entry Work
+    </a>
+    <a href="https://drive.google.com/file/d/1xA2EXAMPLE123/view" target="_blank" class="btn btn-blue">
+      Product Listing (Excel)
+    </a>
+    <a href="https://drive.google.com/file/d/1yB3EXAMPLE456/view" target="_blank" class="btn btn-orange">
+      Web Research Sample
+    </a>
+    <a href="https://drive.google.com/file/d/1zC4EXAMPLE789/view" target="_blank" class="btn btn-purple">
+      PDF to Excel Conversion
+    </a>
+  </div>
+</section>
 
   <!-- Testimonials -->
   <section id="testimonials">
