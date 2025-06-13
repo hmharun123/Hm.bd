@@ -592,5 +592,9 @@ form button {
       };
       updateCount();
     });
+    
+  function toggleMenu() {
+    document.getElementById("mainMenu").classList.toggle("show");
+  }
   </script>
 </body>
