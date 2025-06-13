@@ -330,8 +330,7 @@ form button {
   <!-- Google Search -->
   <div class="search-bar">
     <form action="https://www.google.com/search" method="GET" target="_blank">
-      <input type="text" name="q" placeholder="Search Google...">
-      <button type="submit">Search</button>
+      <input type="text" name="q" placeholder="Search Google..."><button type="submit">Search</button>
     </form>
   </div>
 
