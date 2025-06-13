@@ -243,6 +243,9 @@ form button {
     <a href="#contact">Contact</a>
   </nav>
 
+  <div class="container">
+    <img src="harun.jpg" alt="Harun's Photo" class="profile">
+
   <!-- Hero Section -->
   <section id="hero">
     <h1>Hello, I'm <span class="typed-text"></span></h1>
