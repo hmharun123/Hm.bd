@@ -292,69 +292,7 @@ form button {
 .btn-portfolio.red:hover {
   background-color: #b02a37;
 }
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-}
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #222;
-  color: white;
-  padding: 15px 20px;
-}
-
-.menu-button {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.menu-content {
-  display: none;
-  flex-direction: column;
-  background-color: #333;
-}
-
-.menu-content a {
-  color: white;
-  text-decoration: none;
-  padding: 12px 20px;
-  border-bottom: 1px solid #444;
-  transition: background 0.3s;
-}
-
-.menu-content a:hover {
-  background-color: #555;
-}
-
-.menu-content.show {
-  display: flex;
-}
-
-/* Optional: Desktop view - show menu normally */
-@media (min-width: 768px) {
-  .menu-button {
-    display: none;
-  }
-
-  .menu-content {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .menu-content a {
-    border-bottom: none;
-    padding: 12px 15px;
-  }
-}
 </style>
 <head>
 <!-- Font Awesome CDN -->
@@ -373,41 +311,7 @@ header {
     </form>
   </div>
   
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Three Dot Menu</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-</head>
-<body>
 
-  <header>
-    <h1>Md. Harun Or Rashid</h1>
-    <button class="menu-button" onclick="toggleMenu()">
-      <i class="fas fa-ellipsis-v"></i>
-    </button>
-  </header>
-
-  <nav class="menu-content" id="menu">
-    <a href="#">📱 Profile</a>
-    <a href="#">🔐 Privacy Policy</a>
-    <a href="#">📞 Contact</a>
-    <a href="#">👨‍💻 About</a>
-    <a href="#">⚙️ Settings</a>
-    <a href="#">📄 Certificates</a>
-    <a href="mailto:hmharun0131@gmail.com">📧 Email</a>
-    <a href="cv/HM_HARUN_CV.pdf" download>⬇️ Download CV</a>
-    <a href="https://www.google.com/search?q=Md.+Harun+Or+Rashid" target="_blank">🔍 Google Me</a>
-    <a href="#">📚 Tutorial</a>
-  </nav>
-
-  <script src="script.js"></script>
-
-</body>
-</html>
     <section id="profile" class="section active">
       <h2>📱 Profile</h2>
       <p>Welcome to my portfolio! I am Md. Harun Or Rashid, a passionate web developer.</p>
