@@ -492,17 +492,33 @@ form button {
     </div>
   </section>
 
-  <!-- Order Now Form -->
-  <section id="order">
-    <h2>Order Now</h2>
-    <form action="https://docs.google.com/forms/d/e/your-google-form-id/formResponse" method="POST" target="_blank">
-      <input type="text" name="entry.123456" placeholder="Your Name" required>
-      <input type="harunrm900@gmail.com" name="entry.654321" placeholder="harunrm900@gmail.com" required>
-      <textarea name="entry.112233" placeholder="Your Order Details" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+<section id="order" style="padding: 20px; max-width: 500px; margin: auto;">
+  <h2 style="text-align: center;">Order Now</h2>
 
+  <form action="https://formsubmit.co/harunrm900@gmail.com" method="POST">
+
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+    <!-- Name -->
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Email -->
+    <label for="email">Your Email:</label>
+    <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Message -->
+    <label for="message">Order Details:</label>
+    <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" style="width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; font-size: 16px;">Submit</button>
+  </form>
+</section>
+  
   <!-- Gallery Link -->
   <section id="gallery">
     <h2>My Gallery</h2>
