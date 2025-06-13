@@ -215,7 +215,51 @@ form button {
     flex-direction: column;
     align-items: center;
   }
-  
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 6px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+
+  .btn:hover {
+    opacity: 0.85;
+  }
+
+  .btn.facebook {
+    background-color: #3b5998;
+  }
+
+  .btn.youtube {
+    background-color: #ff0000;
+  }
+
+  .btn.whatsapp {
+    background-color: #25d366;
+  }
+
+  .btn.instagram {
+    background-color: #e1306c;
+  }
+
+  .btn.tiktok {
+    background-color: #000000;
+  }
+
+  .btn.fiverr {
+    background-color: #1dbf73;
+  }
+
+  .btn.fiverr img.icon {
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+</style>
 </style>
 <body onload="preloader()">
   <!-- Preloader -->
