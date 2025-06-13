@@ -356,9 +356,6 @@ form button {
     <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download class="btn">Download CV</a>
   </section>
   
-   <div class="container">
-    <img src="harun.jpg" alt="Harun's Photo" class="profile">
-
   <!-- Portfolio -->
   <section id="portfolio">
     <h2>My Projects</h2>
