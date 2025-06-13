@@ -269,6 +269,18 @@ form button {
     </div>
   </section>
 
+<!-- Portfolio Section -->
+<section class="section portfolio-section" style="padding: 20px; background: #fff;">
+  <h2>My Portfolio</h2>
+  <p>Check out some of my sample work:</p>
+  <div class="portfolio-buttons">
+    <a href="https://docs.google.com/spreadsheets/d/1FSV3CzDlRSDJHaumYrCcvKFcBKGedUhFU9qPDY6viW4/edit?usp=drivesdk" target="_blank" class="btn-portfolio blue">📊 Sample Data Entry</a>
+    <a href="https://drive.google.com/file/d/1xA2EXAMPLE123/view" target="_blank" class="btn-portfolio green">📦 Product Listing (Excel)</a>
+    <a href="https://drive.google.com/file/d/1yB3EXAMPLE456/view" target="_blank" class="btn-portfolio orange">🔍 Web Research Sample</a>
+    <a href="https://drive.google.com/file/d/1zC4EXAMPLE789/view" target="_blank" class="btn-portfolio red">🧾 PDF to Excel Conversion</a>
+  </div>
+</section>
+
   <!-- Testimonials -->
   <section id="testimonials">
     <h2>What Clients Say</h2>
