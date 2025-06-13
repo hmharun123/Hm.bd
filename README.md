@@ -378,7 +378,26 @@ form button {
   </div>
 </div>
 
-<section id="about" style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Md. Harun Or Rashid</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <div style="margin-top: 20px;">
+      <img src="harun-logo.png" alt="Harun Logo" style="width: 180px; border-radius: 15px;">
+    </div>
+
+    <!-- Profile Photo and Name -->
+    <img src="harun.jpg" alt="Harun's Photo" class="profile">
+    <h1>Md. Harun Or Rashid</h1>
+ 
+ <section id="about" style="font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px;">
   <h2>About Me</h2>
   <p><strong>Name:</strong> Md. Harun or Rosid</p>
   <p><strong>Profession:</strong> Freelancer</p>
