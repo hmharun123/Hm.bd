@@ -319,7 +319,6 @@ form button {
   right: 20px;
   z-index: 9999;
 }
-
 .menu-button {
   background: transparent;
   border: none;
@@ -327,7 +326,6 @@ form button {
   cursor: pointer;
   color: #333;
 }
-
 .menu-content {
   display: none;
   position: absolute;
@@ -341,7 +339,6 @@ form button {
   flex-direction: column;
   padding: 10px;
 }
-
 .menu-content a {
   text-decoration: none;
   color: #333;
@@ -350,11 +347,9 @@ form button {
   transition: background 0.3s;
   font-family: Arial, sans-serif;
 }
-
 .menu-content a:hover {
   background-color: #f0f0f0;
 }
-
 .menu-content.show {
   display: block;
 }
@@ -398,7 +393,6 @@ form button {
   </div>
 </div>
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
