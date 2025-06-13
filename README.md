@@ -326,7 +326,7 @@ form button {
   <!-- Certificates -->
   <section id="certificates">
     <h2>Certificates</h2>
-    <img src="file_00000000875861f990b4e5fffbcbb32e.png" alt="Certificate">
+    <img src="certificate.jpg" alt="Certificate">
   </section>
 
   <!-- Social Media Buttons -->
