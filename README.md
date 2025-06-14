@@ -332,8 +332,8 @@ details p {
 
   <!-- Google Search -->
   <div class="search-bar">
-    <form action="https://www.google.com/search" method="GET" target="_blank">🔍 Google Me</a>   <a
-      <input type="text" name="q" placeholder="Search Google..."><button type="submit">Search</button>
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+      <input type="text" name="q" placeholder="Search Google..."><button type="submit">🔍Search</button>
     </form>
   </div>
 
