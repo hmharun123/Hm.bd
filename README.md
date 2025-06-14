@@ -72,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
+  background: linear-gradient(to right, #fd7e14; #fcb69f);
   text-align: center;
 }
 #hero h1 {
@@ -150,7 +150,7 @@ details p {
 }
 /* গ্যালারি বাটন */
 #gallery .btn {
-  background: #555;
+  background: #e1306c; 
   color: white;
   padding: 10px 20px;
 }
