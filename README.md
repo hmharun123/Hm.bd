@@ -509,7 +509,7 @@ details p {
     <p>Email: <a href="mailto:harunrm900@gmail.com">harunrm900@gmail.com</a></p>
     <p>Phone: +8801648131500</p>
     <p>Phone: +8801316888404</p>
-    <p>Address: Manikganj,Dhaka,Bangladesh</p>
+    <p>Address: Manikganj, Dhaka, Bangladesh</p>
   </section>
 
   <!-- Certificates -->
