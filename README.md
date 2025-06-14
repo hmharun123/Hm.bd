@@ -81,7 +81,10 @@
 #hero .btn {
   margin: 10px;
   padding: 10px 20px;
-  background: #fd7e14;
+  .btn-portfolio.green {
+  background-color: #28a745;
+  .btn-Download CV.orange {
+  background-color: #fd7e14;
   color: white;
   text-decoration: none;
   border-radius: 5px;
