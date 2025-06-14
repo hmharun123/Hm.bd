@@ -600,6 +600,33 @@ form button {
     <h2>Certificates</h2>
     <img src="certificate.jpg" alt="Certificate">
   </section>
+  
+  <section id="order" style="padding: 20px; max-width: 500px; margin: auto;">
+  <h2 style="text-align: center;">Order Now</h2>
+
+  <form action="https://formsubmit.co/harunrm900@gmail.com" method="POST">
+
+    <!-- Prevent spam -->
+    <input type="hidden" name="_captcha" value="false">
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+    <!-- Name -->
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Email -->
+    <label for="email">Your Email:</label>
+    <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Message -->
+    <label for="message">Order Details:</label>
+    <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
+
+    <!-- Submit Button -->
+    <button type="submit" style="width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; font-size: 16px;">Submit</button>
+  </form>
+</section>
 
   <!-- Social Media Buttons -->
   <section id="social">
