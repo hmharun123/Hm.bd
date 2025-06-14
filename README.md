@@ -528,6 +528,48 @@ details p {
     </div>
   </section>
 
+  <section id="order" style="padding: 20px; max-width: 500px; margin: auto; font-family: Arial, sans-serif;">
+  <h2 style="text-align: center;">Order Now</h2>
+
+  <form action="https://formsubmit.co/harunrm900@gmail.com" method="POST" enctype="multipart/form-data">
+
+    <!-- Hidden Options -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
+
+    <!-- Name -->
+    <label for="name">Your Name:</label>
+    <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Email -->
+    <label for="email">Your Email:</label>
+    <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+
+    <!-- Message -->
+    <label for="message">Order Details:</label>
+    <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
+
+    <!-- File Upload -->
+    <label for="file">Attach File (optional):</label>
+    <input type="file" name="attachment" id="file" accept="image/*,video/*" style="margin-bottom: 10px;">
+
+    <!-- Submit Button -->
+    <button type="submit" style="width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; font-size: 16px; cursor: pointer;">Submit</button>
+  </form>
+
+  <!-- WhatsApp Button -->
+  <div style="text-align: center; margin-top: 20px;">
+    <a href="https://wa.me/8801648131500?text=Hello%20Md.%20Harun%2C%20I%20want%20to%20send%20a%20photo%20or%20video%20regarding%20my%20order." 
+       target="_blank" 
+       style="display: inline-block; background-color: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-size: 16px;">
+      <i class="fab fa-whatsapp"></i> Send via WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Include FontAwesome for WhatsApp icon -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <!-- Back to Top Button -->
   <button id="backToTop" onclick="scrollToTop()">↑</button>
 
