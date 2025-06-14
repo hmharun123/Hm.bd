@@ -451,6 +451,18 @@ form button {
 </head>
 <body>
 
+<!-- Hero Section Start -->
+<section class="hero-section">
+  <div class="hero-content">
+    <img src="file_00000000758861f884606a82c460dc7a (1).png" alt="Md. Harun Logo" class="hero-logo">
+    <h1 class="hero-title">Md. Harun Or Rashid</h1>
+    <p class="hero-subtitle">Professional Freelancer | Data Entry Expert</p>
+    <a href="#portfolio" class="hero-btn">View Portfolio</a>
+    <a href="assets/Md_Harun_Or_Rashid_CV_Image.pdf" download class="hero-btn secondary">Download CV</a>
+  </div>
+</section>
+
+<!-- Hero Section End -->
 <!-- Profile Photo and Name -->
     <img src="harun.jpg" alt="Harun's Photo" class="profile">
     <h1>Md. Harun Or Rashid</h1>
