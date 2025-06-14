@@ -352,7 +352,7 @@ details p {
     <a href="#about">ℹ️ About</a>
     <a href="#settings">⚙️ Settings</a>
     <a href="#privacy">🔐 Privacy</a>
-    <a href="#contact">📞 Contact</a>
+    <a href="phone-01648131500;01316888404"contact">📞 Contact</a>
     <a href="Md_Harun_Or_Rashid_CV_Image.pdf" download>⬇️ Download CV</a>
     <a href="#order">✉️ Send Message</a>
   </div>
