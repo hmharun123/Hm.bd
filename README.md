@@ -72,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #fd7e14; #fcb69f);
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
   text-align: center;
 }
 #hero h1 {
