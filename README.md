@@ -148,21 +148,6 @@ details p {
   border: none;
   border-radius: 10px;
 }
-/* অর্ডার ফর্ম */
-form input, form textarea {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-form button {
-  padding: 10px 20px;
-  background: green;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
 /* গ্যালারি বাটন */
 #gallery .btn {
   background: #555;
