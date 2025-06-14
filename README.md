@@ -65,26 +65,6 @@
   color: #333;
   text-decoration: none;
 }
-    .logo-section {
-  text-align: center;
-  margin-top: 30px;
-  animation: fadeIn 1.2s ease-in-out;
-}
-.logo-section img {
-  width: 180px;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease;
-}
-.logo-section img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-}
-/* Animation */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
 /* হিরো সেকশন */
 #hero {
   height: 100vh;
@@ -401,13 +381,8 @@ form button {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Logo -->
-    <div style="margin-top: 20px;">
-      <img src="file_00000000758861f884606a82c460dc7a (1).png" alt="Harun Logo" style="width: 180px; border-radius: 15px;">
-    </div>
 
-    <!-- Profile Photo and Name -->
+<!-- Profile Photo and Name -->
     <img src="harun.jpg" alt="Harun's Photo" class="profile">
     <h1>Md. Harun Or Rashid</h1>
  
@@ -527,26 +502,19 @@ form button {
 
 <section id="order" style="padding: 20px; max-width: 500px; margin: auto;">
   <h2 style="text-align: center;">Order Now</h2>
-
-  <form action="https://formsubmit.co/harunrm900@gmail.com" method="POST">
-
     <!-- Prevent spam -->
     <input type="hidden" name="_captcha" value="false">
     <!-- Redirect after submit -->
     <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-
     <!-- Name -->
     <label for="name">Your Name:</label>
     <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-
     <!-- Email -->
     <label for="email">Your Email:</label>
     <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-
     <!-- Message -->
     <label for="message">Order Details:</label>
     <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
-
     <!-- Submit Button -->
     <button type="submit" style="width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; font-size: 16px;">Submit</button>
   </form>
