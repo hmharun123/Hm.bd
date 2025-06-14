@@ -65,6 +65,75 @@
   color: #333;
   text-decoration: none;
 }
+    /* Hero Section Styling */
+.hero-section {
+  background: linear-gradient(to right, #f0f4f8, #e4ecf7);
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero-content {
+  max-width: 600px;
+  margin: auto;
+  animation: fadeIn 1.2s ease-in-out;
+}
+.hero-logo {
+  width: 180px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.hero-logo:hover {
+  transform: scale(1.05);
+}
+.hero-title {
+  font-size: 32px;
+  margin: 20px 0 10px;
+  color: #222;
+  font-weight: bold;
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+.hero-btn {
+  text-decoration: none;
+  display: inline-block;
+  margin: 8px;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.hero-btn:hover {
+  background-color: #0056b3;
+}
+.hero-btn.secondary {
+  background-color: #28a745;
+}
+.hero-btn.secondary:hover {
+  background-color: #1e7e34;
+}
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* Responsive */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .hero-btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }    
 /* হিরো সেকশন */
 #hero {
   height: 100vh;
@@ -500,26 +569,6 @@ form button {
     </div>
   </section>
 
-<section id="order" style="padding: 20px; max-width: 500px; margin: auto;">
-  <h2 style="text-align: center;">Order Now</h2>
-    <!-- Prevent spam -->
-    <input type="hidden" name="_captcha" value="false">
-    <!-- Redirect after submit -->
-    <input type="hidden" name="_next" value="https://yourwebsite.com/thankyou.html">
-    <!-- Name -->
-    <label for="name">Your Name:</label>
-    <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-    <!-- Email -->
-    <label for="email">Your Email:</label>
-    <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
-    <!-- Message -->
-    <label for="message">Order Details:</label>
-    <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
-    <!-- Submit Button -->
-    <button type="submit" style="width: 100%; padding: 12px; background-color: #28a745; color: white; border: none; font-size: 16px;">Submit</button>
-  </form>
-</section>
-  
   <!-- Gallery Link -->
   <section id="gallery">
     <h2>My Gallery</h2>
