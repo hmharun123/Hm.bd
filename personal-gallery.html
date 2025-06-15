@@ -1,1 +1,136 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    .btn-group button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-image { background-color: #e91e63; }
+    .btn-video { background-color: #2196f3; }
+    .btn-audio { background-color: #4caf50; }.content-section {
+  display: none;
+  margin-top: 20px;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.gallery img, .gallery video {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.audio-list {
+  text-align: left;
+  max-width: 600px;
+  margin: auto;
+}
+.audio-item {
+  margin-bottom: 20px;
+}
+.audio-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+#fullscreen-img, #fullscreen-video {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#fullscreen-img img, #fullscreen-video video {
+  max-width: 90%;
+  max-height: 90%;
+}
 
+  </style>
+</head>
+<body>
+  <h1>🎨 Personal Gallery</h1>  <div class="btn-group">
+    <button class="btn-image" onclick="showSection('images')">Image</button>
+    <button class="btn-video" onclick="showSection('videos')">Video</button>
+    <button class="btn-audio" onclick="showSection('audios')">Audio</button>
+  </div>  <!-- Image Gallery -->  <div id="images" class="content-section">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+      <img src="20230228_113841.jpg" alt="Image 1" onclick="openFullscreenImage(this.src)" />
+      <img src="FB_IMG_1666587407132.jpg" alt="Image 2" onclick="openFullscreenImage(this.src)" />
+      <img src="FB_IMG_1666587444246.jpg" alt="Image 3" onclick="openFullscreenImage(this.src)" />
+      <img src="FB_IMG_1666587483595.jpg" alt="Image 4" onclick="openFullscreenImage(this.src)" />
+      <img src="FB_IMG_1666600205144.jpg" alt="Image 5" onclick="openFullscreenImage(this.src)" />
+      <img src="https://via.placeholder.com/400x250.png?text=Sample+Image" alt="Image 6" onclick="openFullscreenImage(this.src)" />
+    </div>
+  </div>  <!-- Video Gallery -->  <div id="videos" class="content-section">
+    <h2>Video Gallery</h2>
+    <div class="gallery">
+      <video src="Nishithe_Jaiyo.mp4" onclick="openFullscreenVideo(this.src)"></video>
+      <video src="Porer_Jaga_Porer_Jomin.mp4" onclick="openFullscreenVideo(this.src)"></video>
+      <video src="sample-video.mp4" onclick="openFullscreenVideo(this.src)"></video>
+    </div>
+  </div>  <!-- Audio Gallery -->  <div id="audios" class="content-section">
+    <h2>Audio Gallery</h2>
+    <div class="audio-list">
+      <div class="audio-item">
+        <div class="audio-title">তোমার বাড়ির রঙের মেলায় - বাপ্পা মজুমদার</div>
+        <audio controls src="Tomar_Barir_Ronger_Melay.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">White White Black Black - Chanchal Chowdhury</div>
+        <audio controls src="White_White_Black_Black.mp3"></audio>
+      </div>
+      <div class="audio-item">
+        <div class="audio-title">Sample Audio</div>
+        <audio controls src="sample-audio.mp3"></audio>
+      </div>
+    </div>
+  </div>  <!-- Fullscreen viewers -->  <div id="fullscreen-img" onclick="this.style.display='none'">
+    <img src="" alt="Fullscreen Image">
+  </div>  <div id="fullscreen-video" onclick="this.style.display='none'">
+    <video src="" controls autoplay></video>
+  </div>  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".content-section");
+      sections.forEach(sec => sec.style.display = "none");
+      document.getElementById(sectionId).style.display = "block";
+    }
+
+    function openFullscreenImage(src) {
+      const viewer = document.getElementById("fullscreen-img");
+      viewer.querySelector("img").src = src;
+      viewer.style.display = "flex";
+    }
+
+    function openFullscreenVideo(src) {
+      const viewer = document.getElementById("fullscreen-video");
+      const video = viewer.querySelector("video");
+      video.src = src;
+      viewer.style.display = "flex";
+      video.play();
+    }
+  </script></body>
+</html>
