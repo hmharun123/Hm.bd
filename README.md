@@ -384,6 +384,12 @@ details p {
   <span style="font-weight: bold; color: #333;">Note Pad</span>
 </a>
 
+<!-- Calendar Shortcut Icon -->
+<a href="calendar.html" target="_blank" style="display: inline-flex; align-items: center; padding: 10px; background: #e0f7fa; border-radius: 10px; text-decoration: none; margin: 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendar Icon" style="width: 30px; height: 30px; margin-right: 8px;">
+  <span style="font-weight: bold; color: #00796b;">Calendar</span>
+</a>
+
 <!-- Hero Section End -->
 <!-- Profile Photo and Name -->
     <img src="harun.jpg" alt="Harun's Photo" class="profile">
