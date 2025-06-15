@@ -378,6 +378,12 @@ details p {
   </div>
 </section>
 
+<!-- Note Pad Shortcut on Homepage -->
+<a href="note.html" target="_blank" style="display: inline-flex; align-items: center; padding: 10px; background: #f0f0f0; border-radius: 10px; text-decoration: none; margin: 10px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/1006/1006540.png" alt="Note Icon" style="width: 30px; height: 30px; margin-right: 8px;">
+  <span style="font-weight: bold; color: #333;">Note Pad</span>
+</a>
+
 <!-- Hero Section End -->
 <!-- Profile Photo and Name -->
     <img src="harun.jpg" alt="Harun's Photo" class="profile">
