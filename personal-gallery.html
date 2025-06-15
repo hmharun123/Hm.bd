@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #4a148c;
+    }
+    .btn-group button {
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .btn-image { background-color: #e91e63; }
+    .btn-video { background-color: #2196f3; }
+    .btn-audio { background-color: #4caf50; }
+
+    .content-section {
+      display: none;
+      margin-top: 20px;
+    }
+    img, video, audio {
+      max-width: 90%;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎨 Personal Gallery</h1>
+
+  <div class="btn-group">
+    <button class="btn-image" onclick="showSection('images')">Image</button>
+    <button class="btn-video" onclick="showSection('videos')">Video</button>
+    <button class="btn-audio" onclick="showSection('audios')">Audio</button>
+  </div>
+
+  <div id="images" class="content-section">
+    <h2>Image Gallery</h2>
+    <img src="https://via.placeholder.com/400x250.png?text=Sample+Image+1" alt="Image 1" />
+    <img src="https://via.placeholder.com/400x250.png?text=Sample+Image+2" alt="Image 2" />
+  </div>
+
+  <div id="videos" class="content-section">
+    <h2>Video Gallery</h2>
+    <video controls>
+      <source src="sample-video.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div id="audios" class="content-section">
+    <h2>Audio Gallery</h2>
+    <audio controls>
+      <source src="sample-audio.mp3" type="audio/mpeg" />
+      Your browser does not support the audio tag.
+    </audio>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".content-section");
+      sections.forEach(sec => sec.style.display = "none");
+
+      document.getElementById(sectionId).style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
