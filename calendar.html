@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Calendar</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+      text-align: center;
+    }
+    .calendar {
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .calendar h2 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      width: 14.2%;
+    }
+    th {
+      background: #00796b;
+      color: white;
+    }
+    td.today {
+      background: #a5d6a7;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calendar">
+    <h2 id="monthYear">June 2025</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"];
+
+    document.getElementById("monthYear").innerText = `${monthNames[currentMonth]} ${currentYear}`;
+
+    function generateCalendar(month, year) {
+      const firstDay = new Date(year, month).getDay();
+      const daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+      const calendarBody = document.getElementById("calendar-body");
+      calendarBody.innerHTML = "";
+
+      let date = 1;
+      for (let i = 0; i < 6; i++) {
+        const row = document.createElement("tr");
+
+        for (let j = 0; j < 7; j++) {
+          const cell = document.createElement("td");
+          if (i === 0 && j < firstDay) {
+            cell.innerText = "";
+          } else if (date > daysInMonth) {
+            break;
+          } else {
+            cell.innerText = date;
+            if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+              cell.classList.add("today");
+            }
+            date++;
+          }
+          row.appendChild(cell);
+        }
+
+        calendarBody.appendChild(row);
+      }
+    }
+
+    generateCalendar(currentMonth, currentYear);
+  </script>
+</body>
+</html>
