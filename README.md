@@ -432,6 +432,11 @@ details p {
     </div>
   </section>
 
+  <!-- Personal Gallery Button -->
+<a href="personal-gallery.html" style="display: inline-block; padding: 12px 20px; background-color: #673ab7; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px;">
+  🎨 Personal Gallery
+</a>
+
 <!-- Portfolio Section -->
 <section class="section portfolio-section" style="padding: 20px; background: #fff;">
   <h2>My Portfolio</h2>
