@@ -154,43 +154,6 @@ details p {
   color: white;
   padding: 10px 20px;
 }
- margin: 0;
-      font-family: Arial, sans-serif;
-      height: 100vh;
-      background: linear-gradient(135deg, #4caf50, #2e7d32);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-    }
-.container {
-      padding: 30px;
-      background-color: rgba(0, 0, 0, 0.2);
-      border-radius: 15px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    }
-    h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    a.button {
-      padding: 12px 25px;
-      background-color: #fff;
-      color: #2e7d32;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      border-radius: 8px;
-      transition: 0.3s;
-    }
-    a.button:hover {
-      background-color: #c8e6c9;
-    }
 /* সার্টিফিকেট ছবি */
 #certificates img {
   width: 300px;
@@ -565,14 +528,6 @@ details p {
     <p>Phone: +8801316888404</p>
     <p>Address: Manikganj, Dhaka, Bangladesh</p>
   </section>
-
-<body>
-  <div class="container">
-    <h1>Secure Note Pad</h1>
-    <p>Your personal secure notebook.</p>
-    <a href="notepad.html" class="button">Go to Notes</a>
-  </div>
-</body>
 
   <!-- Certificates -->
   <section id="certificates">
