@@ -154,6 +154,46 @@ details p {
   color: white;
   padding: 10px 20px;
 }
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      text-align: center;
+    }
+    .container {
+      padding: 40px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .enter-btn {
+      background: white;
+      color: #2E7D32;
+      padding: 12px 30px;
+      border: none;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .enter-btn:hover {
+      background: #f1f1f1;
+    }
 /* সার্টিফিকেট ছবি */
 #certificates img {
   width: 300px;
@@ -513,6 +553,14 @@ details p {
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
+
+<body>
+  <div class="container">
+    <h1>📓 Personal Note Pad</h1>
+    <p>আপনার ব্যক্তিগত নোট, নিরাপদ ও সহজভাবে</p>
+    <a class="enter-btn" href="notepad.html">শুরু করুন ➜</a>
+  </div>
+</body>
 
   <!-- Gallery Link -->
   <section id="gallery">
