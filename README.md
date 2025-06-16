@@ -160,6 +160,62 @@ details p {
   max-width: 90%;
   margin: 10px auto;
 }
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NotePad - Home</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px 0;
+      font-size: 24px;
+    }
+    .container {
+      margin-top: 40px;
+    }
+    .nav-btn {
+      display: block;
+      width: 200px;
+      margin: 15px auto;
+      padding: 15px;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-btn:hover {
+      background-color: #2980b9;
+    }
+    /* Plus icon */
+    .plus-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #e91e63;
+      color: white;
+      font-size: 28px;
+      border: none;
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      text-align: center;
+      line-height: 55px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      cursor: pointer;
+      text-decoration: none;
+    }
 /* সোশ্যাল মিডিয়া বাটন */
 .social-links {
   display: flex;
@@ -534,6 +590,22 @@ details p {
     <h2>Certificates</h2>
     <img src="certificate.jpg" alt="Certificate">
   </section>
+
+  <header>
+    📘 Welcome to NotePad Home
+  </header>
+
+  <div class="container">
+    <a href="note.html" class="nav-btn">📝 Open NotePad</a>
+    <a href="documents.html" class="nav-btn">📂 My Documents</a>
+    <a href="settings.html" class="nav-btn">⚙️ Settings</a>
+  </div>
+
+  <!-- Plus Icon for new note -->
+  <a href="new-note.html" class="plus-icon" title="Create New Note">+</a>
+
+</body>
+</html>
   
   <!-- Social Media Buttons -->
   <section id="social">
