@@ -446,8 +446,8 @@ details p {
   <p><strong>Name:</strong> Md. Harun or Rosid</p>
   <p><strong>Profession:</strong> Freelancer</p>
   <p><strong>Title:</strong> Data Entry, Web Research, Copy-Paste, Data Scraping, Web Scraping</p>
-  <p><strong>Phone:</strong> 01648131500, 01316888404</p>
-  <p><strong>Email:</strong> harunrm900@gmail.com</p>
+  <p><strong>Phone:</strong>📲 01648131500,📲 01316888404</p>
+  <p><strong>Email:</strong>📧 harunrm900@gmail.com</p>
   <p><strong>Address:</strong> Manikganj, Dhaka, Bangladesh</p>
   <p><strong>Education:</strong> SSC, Lemu Bari Binoda Sundari High School</p>
   <p><strong>Skills:</strong> Data Entry, Web Scraping, Copy Paste, Research</p>
@@ -485,12 +485,12 @@ details p {
   <title>My Notepad</title>
   <div class="logo" onclick="window.location.href='notepad.html'">
     <img src="https://cdn-icons-png.flaticon.com/512/1006/1006540.png" alt="Note Icon" style="width: 30px; height: 30px; margin-right: 8px;">
-    <p><strong>Click to Open Notepad</strong></p>
+    <p><strong>Click to Open Notepad📚</strong></p>
   </div>
 
   <!-- Personal Gallery Button -->
 <a href="personal-gallery.html" style="display: inline-block; padding: 12px 20px; background-color: #673ab7; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px;">
-  🎨 Personal Gallery
+  🎬 Personal Gallery
 </a>
 
 <!-- Portfolio Section -->
@@ -572,16 +572,16 @@ details p {
 
   <!-- Gallery Link -->
   <section id="gallery">
-    <h2>My Gallery</h2>
+    <h2>My🎬 Gallery</h2>
     <a href="gallery.html" class="btn">Visit Full Gallery</a>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:harunrm900@gmail.com">harunrm900@gmail.com</a></p>
-    <p>Phone: +8801648131500</p>
-    <p>Phone: +8801316888404</p>
+    <p>Email: <a href="mailto:📮 harunrm900@gmail.com">harunrm900@gmail.com</a></p>
+    <p>Phone:☎️ +8801648131500</p>
+    <p>Phone:☎️ +8801316888404</p>
     <p>Address: Manikganj, Dhaka, Bangladesh</p>
   </section>
 
@@ -644,7 +644,7 @@ details p {
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
   <!-- Back to Top Button -->
-  <button id="backToTop" onclick="scrollToTop()">↑</button>
+  <button id="backToTop" onclick="scrollToTop()">⬆️</button>
 
   <!-- Live Chat Widget -->
   <script type="text/javascript">
