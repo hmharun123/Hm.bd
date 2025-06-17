@@ -458,7 +458,12 @@ details p {
       <div class="portfolio-item"><img src="312.jpg" alt="Web"><p>Web Design</p></div>
     </div>
   </section>
-
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Notepad</title>
   <div class="logo" onclick="window.location.href='notepad.html'">
     <img src="notepad-logo.png" alt="Notepad Logo">
     <p><strong>Click to Open Notepad</strong></p>
