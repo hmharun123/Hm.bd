@@ -148,13 +148,6 @@ details p {
   border: none;
   border-radius: 10px;
 } 
-    <!DOCTYPE html>
-<html lang="bn">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Notepad</title>
-  <style>
     body {
       display: flex;
       justify-content: center;
@@ -458,7 +451,7 @@ details p {
       <div class="portfolio-item"><img src="312.jpg" alt="Web"><p>Web Design</p></div>
     </div>
   </section>
-<!DOCTYPE html>
+
 <html lang="bn">
 <head>
   <meta charset="UTF-8">
