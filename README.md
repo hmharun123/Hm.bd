@@ -148,34 +148,32 @@ details p {
   border: none;
   border-radius: 10px;
 } 
- <html lang="bn">
+    <!DOCTYPE html>
+<html lang="bn">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Notepad</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Notepad</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
       height: 100vh;
-      background-color: #f9f9f9;
+      background: #f4f4f4;
+      font-family: Arial;
     }
-    .logo-container {
+    .logo {
       text-align: center;
-    }
-    .logo-container img {
-      width: 120px;
-      height: auto;
       cursor: pointer;
     }
-    .logo-container h1 {
-      font-size: 24px;
-      margin-top: 10px;
+    .logo img {
+      width: 120px;
+      border-radius: 20px;
+    }
+    .logo p {
+      font-size: 20px;
+      color: #333;
     }
 /* গ্যালারি বাটন */
 #gallery .btn {
@@ -461,11 +459,9 @@ details p {
     </div>
   </section>
 
-  <div class="logo-container">
-    <a href="notepad.html">
-      <img src="assets/notepad-logo.png" alt="Personal Notepad Logo">
-      <h1>Personal Notepad</h1>
-    </a>
+  <div class="logo" onclick="window.location.href='notepad.html'">
+    <img src="notepad-logo.png" alt="Notepad Logo">
+    <p><strong>Click to Open Notepad</strong></p>
   </div>
 
   <!-- Personal Gallery Button -->
