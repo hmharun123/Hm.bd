@@ -147,7 +147,14 @@ details p {
   height: 200px;
   border: none;
   border-radius: 10px;
-}  
+} 
+   <html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Notepad</title> 
+    <style>
+    body }
       display: flex;
       justify-content: center;
       align-items: center;
