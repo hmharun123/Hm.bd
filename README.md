@@ -432,7 +432,7 @@ details p {
 
 <!-- Calendar Shortcut Icon -->
 <a href="calendar.html" target="_blank" style="display: inline-flex; align-items: center; padding: 10px; background: #e0f7fa; border-radius: 10px; text-decoration: none; margin: 10px;">
-  <img src="📅" alt="Calendar Icon" style="width: 30px; height: 30px; margin-right: 8px;">
+  <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png " alt="📅  Calendar Icon" style="width: 30px; height: 30px; margin-right: 8px;">
   <span style="font-weight: bold; color: #00796b;">Calendar</span>
 </a>
 
@@ -613,11 +613,11 @@ details p {
 
     <!-- Name -->
     <label for="name">Your Name:</label>
-    <input type="text" name="name" id="name" placeholder="Md Harun" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <input type="text" name="name" id="name" placeholder= required style="width: 100%; padding: 10px; margin-bottom: 10px;">
 
     <!-- Email -->
     <label for="email">Your Email:</label>
-    <input type="email" name="email" id="email" placeholder="harunrm900@gmail.com" required style="width: 100%; padding: 10px; margin-bottom: 10px;">
+    <input type="email" name="email" id="email" placeholder=required style="width: 100%; padding: 10px; margin-bottom: 10px;">
 
     <!-- Message -->
     <label for="message">Order Details:</label>
