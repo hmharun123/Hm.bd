@@ -344,6 +344,23 @@ details p {
 .menu-content.show {
   display: block;
 }
+.cross-back {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  font-size: 28px;
+  color: #f44336;
+  text-decoration: none;
+  font-weight: bold;
+  background: #fff;
+  border-radius: 50%;
+  padding: 4px 10px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+.cross-back:hover {
+  background: #f44336;
+  color: white;
+}
 </style>
 <head>
 <!-- Font Awesome CDN -->
@@ -354,7 +371,10 @@ details p {
 
 <body onload="preloader()">
   <!-- Preloader -->
-  <div id="preloader"></div>
+  <div id="preloader"> 
+  </div>
+
+  <a href="index.html" class="cross-back" title="Back to Home">❌</a>
 
   <!-- Google Search -->
   <div class="search-bar">
