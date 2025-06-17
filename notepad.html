@@ -1,1 +1,268 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure NotePad</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark-mode {
+      background: #121212;
+      color: #f1f1f1;
+    }
+    header {
+      background: #4CAF50;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .note-list, .note-editor {
+      margin-top: 20px;
+    }
+    .note-item {
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .dark-mode .note-item {
+      background: #1e1e1e;
+    }
+    #editor {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      min-height: 200px;
+      background: #fff;
+    }
+    .dark-mode #editor {
+      background: #1e1e1e;
+      color: #fff;
+      border-color: #444;
+    }
+    .toolbar button {
+      margin: 5px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      color: white;
+    }
+    .btn-dark { background: #555; }
+    .btn-save { background: #4CAF50; }
+    .btn-delete { background: #e74c3c; }
+    .btn-copy { background: #3498db; }
+    .btn-export { background: #8e44ad; }
+    .btn-import { background: #f39c12; }
+    .btn-trash { background: #c0392b; }
+    .btn-ai { background: #2c3e50; }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    select {
+      padding: 8px;
+      width: 100%;
+      margin: 5px 0;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
 
+  <header>📝 Secure NotePad</header>
+  <div class="container">
+
+    <div>
+      <input type="text" id="searchBox" placeholder="🔍 সার্চ নোট..." oninput="renderNotes()" />
+      <button class="btn-dark" onclick="toggleDarkMode()">🌙 ডার্ক মোড</button>
+    </div>
+
+    <div class="note-list" id="noteList"></div>
+
+    <div class="note-editor" id="noteEditor" style="display: none;">
+      <input type="text" id="noteTitle" placeholder="নোট টাইটেল লিখুন..." />
+      <input type="password" id="notePassword" placeholder="🔐 এই নোটের জন্য পাসওয়ার্ড দিন (ঐচ্ছিক)" />
+      <select id="noteCategory">
+        <option value="">ক্যাটাগরি সিলেক্ট করুন</option>
+        <option value="Personal">Personal</option>
+        <option value="Work">Work</option>
+        <option value="Idea">Idea</option>
+      </select>
+      <div id="editor" contenteditable="true" placeholder="এখানে নোট লিখুন..."></div>
+
+      <div class="toolbar">
+        <button class="btn-save" onclick="saveNote()">💾 Save</button>
+        <button class="btn-copy" onclick="copyNote()">📋 Copy</button>
+        <button class="btn-delete" onclick="deleteNote()">🗑️ Delete</button>
+        <button class="btn-export" onclick="exportNote()">📄 Export</button>
+        <button class="btn-import" onclick="document.getElementById('importFile').click()">📥 Import</button>
+        <button class="btn-trash" onclick="moveToTrash()">🗑️ Archive</button>
+        <button class="btn-ai" onclick="insertAISuggestion()">🤖 AI Suggest</button>
+        <button onclick="backToList()">🔙 Back</button>
+        <input type="file" id="importFile" accept=".json" style="display: none" onchange="importNotes(event)" />
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    let notes = JSON.parse(localStorage.getItem("notes")) || [];
+    let trash = JSON.parse(localStorage.getItem("trash")) || [];
+    let currentId = null;
+
+    function renderNotes() {
+      const list = document.getElementById('noteList');
+      const query = document.getElementById('searchBox').value.toLowerCase();
+      list.innerHTML = `<button onclick="newNote()">➕ নতুন নোট</button><hr/>`;
+      notes.filter(n => !n.deleted).filter(n => n.title.toLowerCase().includes(query)).forEach((n, i) => {
+        list.innerHTML += `<div class="note-item" onclick="openNote(${i})">
+          <strong>${n.title}</strong><br>
+          <small>${n.category || ''} • ${n.date}</small>
+        </div>`;
+      });
+    }
+
+    function newNote() {
+      currentId = null;
+      document.getElementById('noteEditor').style.display = 'block';
+      document.getElementById('noteTitle').value = '';
+      document.getElementById('notePassword').value = '';
+      document.getElementById('noteCategory').value = '';
+      document.getElementById('editor').innerHTML = '';
+      document.getElementById('noteList').style.display = 'none';
+    }
+
+    function openNote(id) {
+      const n = notes[id];
+      if (n.password && prompt("🔐 এই নোটের পাসওয়ার্ড দিন:") !== n.password) {
+        alert("❌ ভুল পাসওয়ার্ড!");
+        return;
+      }
+      currentId = id;
+      document.getElementById('noteEditor').style.display = 'block';
+      document.getElementById('noteTitle').value = n.title;
+      document.getElementById('notePassword').value = n.password || '';
+      document.getElementById('noteCategory').value = n.category;
+      document.getElementById('editor').innerHTML = n.content;
+      document.getElementById('noteList').style.display = 'none';
+    }
+
+    function saveNote() {
+      const title = document.getElementById('noteTitle').value.trim();
+      const content = document.getElementById('editor').innerHTML.trim();
+      const category = document.getElementById('noteCategory').value;
+      const password = document.getElementById('notePassword').value;
+      const date = new Date().toLocaleString();
+
+      if (!title || !content) return alert("📝 টাইটেল ও কনটেন্ট লিখুন");
+
+      const note = { title, content, category, password, date, deleted: false };
+
+      if (currentId !== null) notes[currentId] = note;
+      else notes.push(note);
+
+      localStorage.setItem('notes', JSON.stringify(notes));
+      alert("✅ সংরক্ষণ হয়েছে");
+      backToList();
+    }
+
+    function deleteNote() {
+      if (currentId !== null && confirm("এই নোট ডিলিট করবেন?")) {
+        notes.splice(currentId, 1);
+        localStorage.setItem('notes', JSON.stringify(notes));
+        backToList();
+      }
+    }
+
+    function moveToTrash() {
+      if (currentId !== null) {
+        notes[currentId].deleted = true;
+        localStorage.setItem('notes', JSON.stringify(notes));
+        alert("🗑️ Archive এ নেয়া হয়েছে");
+        backToList();
+      }
+    }
+
+    function exportNote() {
+      const title = document.getElementById('noteTitle').value;
+      const content = document.getElementById('editor').innerText;
+      const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = `${title}.txt`;
+      a.click();
+    }
+
+    function importNotes(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        try {
+          const imported = JSON.parse(evt.target.result);
+          if (Array.isArray(imported)) {
+            notes = notes.concat(imported);
+            localStorage.setItem('notes', JSON.stringify(notes));
+            renderNotes();
+            alert("📥 Import সফল হয়েছে");
+          }
+        } catch {
+          alert("❌ ফাইল সমস্যা");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function copyNote() {
+      const temp = document.createElement("textarea");
+      temp.value = document.getElementById('editor').innerText;
+      document.body.appendChild(temp);
+      temp.select();
+      document.execCommand("copy");
+      document.body.removeChild(temp);
+      alert("📋 কপি হয়েছে");
+    }
+
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function insertAISuggestion() {
+      const ideas = [
+        "🎯 আজকের লক্ষ্য: ৩টি গুরুত্বপূর্ণ কাজ শেষ করা",
+        "💡 একটি নতুন আইডিয়া: টাইম ট্র্যাকিং অ্যাপ বানানো",
+        "📌 আগামিকালের টুডু: প্রজেক্ট প্রেজেন্টেশন"
+      ];
+      const random = ideas[Math.floor(Math.random() * ideas.length)];
+      document.getElementById('editor').innerHTML += `<p>${random}</p>`;
+    }
+
+    function backToList() {
+      document.getElementById('noteEditor').style.display = 'none';
+      document.getElementById('noteList').style.display = 'block';
+      renderNotes();
+    }
+
+    window.onload = renderNotes;
+  </script>
+</body>
+</html>
