@@ -432,7 +432,7 @@ details p {
 
 <!-- Calendar Shortcut Icon -->
 <a href="calendar.html" target="_blank" style="display: inline-flex; align-items: center; padding: 10px; background: #e0f7fa; border-radius: 10px; text-decoration: none; margin: 10px;">
-  <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png" alt="Calendar Icon" style="width: 30px; height: 30px; margin-right: 8px;">
+  <img src="📅" alt="Calendar Icon" style="width: 30px; height: 30px; margin-right: 8px;">
   <span style="font-weight: bold; color: #00796b;">Calendar</span>
 </a>
 
@@ -446,9 +446,10 @@ details p {
   <p><strong>Name:</strong> Md. Harun or Rosid</p>
   <p><strong>Profession:</strong> Freelancer</p>
   <p><strong>Title:</strong> Data Entry, Web Research, Copy-Paste, Data Scraping, Web Scraping</p>
-  <p><strong>Phone:</strong>📲 01648131500,📲 01316888404</p>
+  <p><strong>Phone:</strong> ☎️ 01648131500,</p>
+  <p><strong>Phone:</strong> ☎️ 01316888404,</p>
   <p><strong>Email:</strong>📧 harunrm900@gmail.com</p>
-  <p><strong>Address:</strong> Manikganj, Dhaka, Bangladesh</p>
+  <p><strong>Address:</strong> 🏠 Manikganj, Dhaka, Bangladesh🇧🇩 </p>
   <p><strong>Education:</strong> SSC, Lemu Bari Binoda Sundari High School</p>
   <p><strong>Skills:</strong> Data Entry, Web Scraping, Copy Paste, Research</p>
   <p><strong>Languages:</strong> Bengali, English, Hindi</p>
@@ -579,7 +580,7 @@ details p {
   <!-- Contact Section -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:📮 harunrm900@gmail.com">harunrm900@gmail.com</a></p>
+    <p>Email: <a href="mailto:harunrm900@gmail.com">📮 harunrm900@gmail.com</a></p>
     <p>Phone:☎️ +8801648131500</p>
     <p>Phone:☎️ +8801316888404</p>
     <p>Address: Manikganj, Dhaka, Bangladesh</p>
@@ -623,7 +624,7 @@ details p {
     <textarea name="message" id="message" placeholder="Write your order details here..." required style="width: 100%; padding: 10px; height: 120px; margin-bottom: 10px;"></textarea>
 
     <!-- File Upload -->
-    <label for="file">Attach File (optional):</label>
+    <label for="file">Attach File (📎):</label>
     <input type="file" name="attachment" id="file" accept="image/*,video/*" style="margin-bottom: 10px;">
 
     <!-- Submit Button -->
