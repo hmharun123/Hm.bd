@@ -464,7 +464,7 @@ details p {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>My Notepad</title>
   <div class="logo" onclick="window.location.href='notepad.html'">
-    <img src="notepad-logo.png" alt="Notepad Logo">
+    <img src="https://cdn-icons-png.flaticon.com/512/1006/1006540.png" alt="Note Icon" style="width: 30px; height: 30px; margin-right: 8px;">
     <p><strong>Click to Open Notepad</strong></p>
   </div>
 
