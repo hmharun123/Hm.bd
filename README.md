@@ -147,7 +147,36 @@ details p {
   height: 200px;
   border: none;
   border-radius: 10px;
-}
+} 
+ <html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Notepad</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+    }
+    .logo-container {
+      text-align: center;
+    }
+    .logo-container img {
+      width: 120px;
+      height: auto;
+      cursor: pointer;
+    }
+    .logo-container h1 {
+      font-size: 24px;
+      margin-top: 10px;
+    }
 /* গ্যালারি বাটন */
 #gallery .btn {
   background: #e1306c; 
@@ -431,6 +460,13 @@ details p {
       <div class="portfolio-item"><img src="312.jpg" alt="Web"><p>Web Design</p></div>
     </div>
   </section>
+
+  <div class="logo-container">
+    <a href="notepad.html">
+      <img src="assets/notepad-logo.png" alt="Personal Notepad Logo">
+      <h1>Personal Notepad</h1>
+    </a>
+  </div>
 
   <!-- Personal Gallery Button -->
 <a href="personal-gallery.html" style="display: inline-block; padding: 12px 20px; background-color: #673ab7; color: white; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px;">
