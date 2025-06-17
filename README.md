@@ -147,8 +147,7 @@ details p {
   height: 200px;
   border: none;
   border-radius: 10px;
-} 
-    body {
+}  
       display: flex;
       justify-content: center;
       align-items: center;
