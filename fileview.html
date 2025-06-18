@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📂 ফাইল ভিউয়ার</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+    }
+    .file-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .file-item {
+      background: #e3f2fd;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s;
+    }
+    .file-item:hover {
+      background: #bbdefb;
+    }
+    .file-actions button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .file-actions .load {
+      background-color: #0d47a1;
+      color: white;
+    }
+    .file-actions .delete {
+      background-color: #e53935;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>📂 সংরক্ষিত ফাইলসমূহ</h1>
+  <div class="file-list" id="fileList"></div>
+
+  <script>
+    function loadFiles() {
+      const container = document.getElementById('fileList');
+      container.innerHTML = '';
+      Object.keys(localStorage).filter(key => key.startsWith('note-')).forEach(key => {
+        const value = localStorage.getItem(key);
+        const div = document.createElement('div');
+        div.className = 'file-item';
+        div.innerHTML = `
+          <div><strong>${key}</strong></div>
+          <div class="file-actions">
+            <button class="load" onclick="loadNote('${key}')">🔍 View</button>
+            <button class="delete" onclick="deleteNote('${key}')">🗑 Delete</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function loadNote(key) {
+      const content = localStorage.getItem(key);
+      alert('📄 ' + key + '\n\n' + content);
+    }
+
+    function deleteNote(key) {
+      if (confirm(`আপনি কি নিশ্চিতভাবে "${key}" নোটটি মুছে ফেলতে চান?`)) {
+        localStorage.removeItem(key);
+        loadFiles();
+      }
+    }
+
+    loadFiles();
+  </script>
+</body>
+</html>
 
