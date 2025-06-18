@@ -1,1 +1,93 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🗑️ আর্কাইভ ও ট্র্যাশ</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+    }
+    .trash-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .trash-item {
+      background: #ffebee;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .trash-actions button {
+      margin-left: 10px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .restore {
+      background-color: #4caf50;
+      color: white;
+    }
+    .delete-permanent {
+      background-color: #e53935;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>🗑️ ট্র্যাশ / আর্কাইভ</h1>
+  <div class="trash-list" id="trashList"></div>
+
+  <script>
+    const trashKey = 'trash-notes';
+
+    function loadTrash() {
+      const container = document.getElementById('trashList');
+      container.innerHTML = '';
+      const trash = JSON.parse(localStorage.getItem(trashKey)) || [];
+
+      trash.forEach((note, index) => {
+        const div = document.createElement('div');
+        div.className = 'trash-item';
+        div.innerHTML = `
+          <div><strong>${note.title}</strong></div>
+          <div class="trash-actions">
+            <button class="restore" onclick="restoreNote(${index})">🔁 Restore</button>
+            <button class="delete-permanent" onclick="deletePermanently(${index})">❌ Delete</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function restoreNote(index) {
+      const trash = JSON.parse(localStorage.getItem(trashKey)) || [];
+      const note = trash.splice(index, 1)[0];
+      localStorage.setItem(note.key, note.content);
+      localStorage.setItem(trashKey, JSON.stringify(trash));
+      loadTrash();
+    }
+
+    function deletePermanently(index) {
+      const trash = JSON.parse(localStorage.getItem(trashKey)) || [];
+      trash.splice(index, 1);
+      localStorage.setItem(trashKey, JSON.stringify(trash));
+      loadTrash();
+    }
+
+    loadTrash();
+  </script>
+</body>
+</html>
