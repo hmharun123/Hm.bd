@@ -486,7 +486,7 @@ details p {
   
 <body>
   <div class="hero">
-    <img src="https://i.ibb.co/sV8TqMf/profile-demo.png" alt="ডেমো প্রোফাইল">
+    <img src="FB_IMG_1666600343293.jpg " alt="ডেমো প্রোফাইল">
     <h1>মানিকগঞ্জের বড় মিয়া</h1>
     <p>স্বাগতম! আমি মো: হামজা।<br>এখানে পাবেন আমার সেরা ফিচারসমূহ।</p>
     <a href="features.html" class="button">🌟 Explore Features</a>
