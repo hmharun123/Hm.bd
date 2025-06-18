@@ -1,1 +1,78 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🧠 AI Suggestion (Demo)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f3f3;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .ai-box {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #00b894;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .suggestion {
+      margin-top: 20px;
+      background: #dfe6e9;
+      padding: 10px;
+      border-radius: 5px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI সাজেশন (ডেমো)</h1>
+  <div class="ai-box">
+    <label for="noteInput">✍️ আপনার নোট লিখুন:</label>
+    <textarea id="noteInput" placeholder="একটি বিষয় লিখুন..."></textarea>
+    <button onclick="generateSuggestion()">🪄 সাজেশন দেখুন</button>
+    <div id="suggestionBox" class="suggestion" style="display: none;"></div>
+  </div>
+
+  <script>
+    const suggestions = [
+      "আপনার ডেইলি টাস্ক লিস্ট তৈরি করুন",
+      "আজকের টার্গেট ৩টা জিনিস সম্পন্ন করা",
+      "একটি ছোট ব্লগ লিখে ফেইসবুকে শেয়ার করুন",
+      "আপনার আগের লেখাগুলোকে আপডেট করুন",
+      "একটা নতুন প্রজেক্ট আইডিয়া লিখে ফেলুন",
+      "একটি মোটিভেশনাল কোটস লিখে দিন",
+      "শর্ট টার্ম ও লং টার্ম প্ল্যান আলাদা করে নোট করুন"
+    ];
+
+    function generateSuggestion() {
+      const random = Math.floor(Math.random() * suggestions.length);
+      document.getElementById("suggestionBox").style.display = "block";
+      document.getElementById("suggestionBox").innerText = "💡 সাজেশন: " + suggestions[random];
+    }
+  </script>
+</body>
+</html>
