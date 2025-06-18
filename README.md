@@ -595,7 +595,7 @@ details p {
 
   <!-- Portfolio -->
   <section id="portfolio">
-    <h2>My Projects</h2>
+    <h2>🛠️ My Projects</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item"><img src="data.jpg" alt="Data Entry"><p>Data Entry</p></div>
       <div class="portfolio-item"><img src="SAMPLE.jpeg" alt="Design"><p>Graphics Design</p></div>
@@ -607,7 +607,7 @@ details p {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Notepad</title>
+  <title>📒 My Notepad</title>
   <div class="logo" onclick="window.location.href='notepad.html'">
     <img src="https://cdn-icons-png.flaticon.com/512/1006/1006540.png" alt="Note Icon" style="width: 30px; height: 30px; margin-right: 8px;">
     <p><strong>Click to Open Notepad📚</strong></p>
@@ -620,7 +620,7 @@ details p {
 
 <!-- Portfolio Section -->
 <section class="section portfolio-section" style="padding: 20px; background: #fff;">
-  <h2>My Portfolio</h2>
+  <h2>⚒️ My Portfolio</h2>
   <p>Check out some of my sample work:</p>
   <div class="portfolio-buttons">
     <a href="https://docs.google.com/spreadsheets/d/1FSV3CzDlRSDJHaumYrCcvKFcBKGedUhFU9qPDY6viW4/edit?usp=drivesdk" target="_blank" class="btn-portfolio blue">📊 Sample Data Entry</a>
@@ -688,7 +688,7 @@ details p {
 
    <!-- Embedded TikTok & YouTube -->
   <section id="videos">
-    <h2>My Videos</h2>
+    <h2>📽️ My Videos</h2>
     <div class="video-container">
       <iframe src="https://www.tiktok.com/embed/@user6071584366187/" frameborder="0" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
@@ -712,7 +712,7 @@ details p {
 
   <!-- Certificates -->
   <section id="certificates">
-    <h2>Certificates</h2>
+    <h2>🎓 Certificates</h2>
     <img src="certificate.jpg" alt="Certificate">
   </section>
 
