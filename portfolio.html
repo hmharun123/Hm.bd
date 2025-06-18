@@ -1,1 +1,74 @@
-
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 Portfolio Filter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .filter-btns {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .filter-btns button {
+      margin: 5px;
+      padding: 10px 15px;
+      border: none;
+      background: #0984e3;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+    }
+    .item {
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: 0.2s;
+    }
+    .item:hover {
+      transform: scale(1.02);
+    }
+    .item img {
+      width: 100%;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body><h1>📊 পোর্টফোলিও</h1>
+<div class="filter-btns">
+  <button onclick="filterItems('all')">সব</button>
+  <button onclick="filterItems('web')">ওয়েব ডিজাইন</button>
+  <button onclick="filterItems('design')">গ্রাফিক ডিজাইন</button>
+  <button onclick="filterItems('video')">ভিডিও এডিটিং</button>
+</div><div class="portfolio-grid" id="portfolio">
+  <div class="item" data-type="web"><img src="assets/web1.jpg" alt="Web 1"><p>ওয়েব প্রজেক্ট ১</p></div>
+  <div class="item" data-type="design"><img src="assets/design1.jpg" alt="Design 1"><p>ডিজাইন ১</p></div>
+  <div class="item" data-type="video"><img src="assets/video1.jpg" alt="Video 1"><p>ভিডিও ১</p></div>
+  <div class="item" data-type="web"><img src="assets/web2.jpg" alt="Web 2"><p>ওয়েব প্রজেক্ট ২</p></div>
+  <div class="item" data-type="design"><img src="assets/design2.jpg" alt="Design 2"><p>ডিজাইন ২</p></div>
+</div><script>
+function filterItems(type) {
+  const items = document.querySelectorAll('.item');
+  items.forEach(item => {
+    if (type === 'all' || item.dataset.type === type) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script></body>
+</html>
