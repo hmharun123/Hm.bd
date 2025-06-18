@@ -64,7 +64,34 @@
   margin: 5px 0;
   color: #333;
   text-decoration: none;
-}
+} 
+  #clock-container {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    display: inline-block;
+    font-family: 'Arial', sans-serif;
+    margin-top: 20px;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+  }
+#current-date, #current-time {
+    font-size: 20px;
+    color: #2c3e50;
+    font-weight: bold;
+    margin: 5px 0;
+  }
+/* ডার্ক মোডে টাইম ও ডেটের রঙ */
+  .dark-mode #clock-container {
+    background: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.1);
+  }
+.dark-mode #current-date,
+  .dark-mode #current-time {
+    color: #f1f1f1;
+  }
 /* হিরো সেকশন */
 #hero {
   height: 100vh;
@@ -344,23 +371,6 @@ details p {
 .menu-content.show {
   display: block;
 }
-.cross-back {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 28px;
-  color: #f44336;
-  text-decoration: none;
-  font-weight: bold;
-  background: #fff;
-  border-radius: 50%;
-  padding: 4px 10px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
-}
-.cross-back:hover {
-  background: #f44336;
-  color: white;
-}
 </style>
 <head>
 <!-- Font Awesome CDN -->
@@ -369,12 +379,15 @@ details p {
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<div id="clock-container">
+  <div id="current-date">📅 তারিখ লোড হচ্ছে...</div>
+  <div id="current-time">⏰ সময় লোড হচ্ছে...</div>
+</div>
+
 <body onload="preloader()">
   <!-- Preloader -->
   <div id="preloader"> 
   </div>
-
-  <a href="index.html" class="cross-back" title="Back to Home">❌</a>
 
   <!-- Google Search -->
   <div class="search-bar">
@@ -707,5 +720,23 @@ details p {
   function toggleMenu() {
     document.getElementById("mainMenu").classList.toggle("show");
   }
+   
+  function updateClock() {
+    const now = new Date();
+
+    const date = now.toLocaleDateString('bn-BD', {
+      weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    });
+
+    const time = now.toLocaleTimeString('bn-BD', {
+      hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true
+    });
+
+    document.getElementById('current-date').innerText = '📅 ' + date;
+    document.getElementById('current-time').innerText = '⏰ ' + time;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
   </script>
 </body>
