@@ -1,1 +1,52 @@
-
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📎 Copy to Clipboard</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f1f2f6;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2d3436;
+    }
+    textarea {
+      width: 80%;
+      max-width: 500px;
+      height: 150px;
+      margin: 20px auto;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #00b894;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #019875;
+    }
+  </style>
+</head>
+<body>
+  <h1>📎 টেক্সট ক্লিপবোর্ডে কপি করুন</h1>
+  <textarea id="copyText" placeholder="এখানে আপনার লেখা লিখুন..."></textarea>
+  <br>
+  <button onclick="copyToClipboard()">📋 কপি করুন</button>  <script>
+    function copyToClipboard() {
+      const textArea = document.getElementById("copyText");
+      textArea.select();
+      document.execCommand("copy");
+      alert("✅ টেক্সট ক্লিপবোর্ডে কপি হয়েছে!");
+    }
+  </script></body>
+</html>
