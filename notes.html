@@ -1,1 +1,136 @@
 
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notes App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #0d47a1;
+    }
+    .note-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+    }
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      background-color: #0d47a1;
+      color: white;
+    }
+    select, input[type="text"] {
+      padding: 8px;
+      font-size: 14px;
+    }
+    .saved-notes {
+      margin-top: 30px;
+    }
+    .note-item {
+      background: #e3f2fd;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>📝 স্মার্ট নোটপ্যাড</h1>
+  <div class="note-container">
+    <textarea id="noteInput" placeholder="আপনার নোট লিখুন..."></textarea>
+    <div class="actions">
+      <button onclick="saveNote()">💾 Save</button>
+      <button onclick="clearNote()">🧹 Clear</button>
+      <button onclick="exportNote('txt')">📤 Export TXT</button>
+      <button onclick="exportNote('pdf')">📄 Export PDF</button>
+      <button onclick="copyToClipboard()">📎 Copy</button>
+    </div>
+
+    <div class="saved-notes">
+      <h3>📂 সংরক্ষিত নোটসমূহ</h3>
+      <div id="noteList"></div>
+    </div>
+  </div>
+
+  <script>
+    const noteInput = document.getElementById('noteInput');
+    const noteList = document.getElementById('noteList');
+
+    function saveNote() {
+      const content = noteInput.value.trim();
+      if (!content) return;
+      const time = new Date().toLocaleString();
+      localStorage.setItem('note-' + time, content);
+      noteInput.value = '';
+      loadNotes();
+    }
+
+    function clearNote() {
+      noteInput.value = '';
+    }
+
+    function loadNotes() {
+      noteList.innerHTML = '';
+      Object.keys(localStorage).filter(k => k.startsWith('note-')).forEach(key => {
+        const div = document.createElement('div');
+        div.className = 'note-item';
+        div.textContent = key + ': ' + localStorage.getItem(key).substring(0, 50);
+        div.onclick = () => {
+          noteInput.value = localStorage.getItem(key);
+        };
+        noteList.appendChild(div);
+      });
+    }
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText(noteInput.value).then(() => alert('📋 কপি করা হয়েছে!'));
+    }
+
+    function exportNote(type) {
+      const text = noteInput.value;
+      if (!text) return;
+      const blob = type === 'txt'
+        ? new Blob([text], { type: 'text/plain' })
+        : new Blob([`<html><body><pre>${text}</pre></body></html>`], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'note.' + type;
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    loadNotes();
+  </script>
+</body>
+</html>
