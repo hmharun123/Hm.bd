@@ -1,1 +1,62 @@
-
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🔍 Live Search Filter</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f1f2f6;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2d3436;
+    }
+    input[type="text"] {
+      width: 80%;
+      max-width: 500px;
+      padding: 10px;
+      font-size: 16px;
+      margin: 20px auto;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    ul {
+      max-width: 500px;
+      margin: auto;
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #fff;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 5px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 লাইভ সার্চ ফিল্টার</h1>
+  <input type="text" id="searchBox" placeholder="যে কোনো টেক্সট লিখুন..." onkeyup="searchItems()">
+  <ul id="itemList">
+    <li>ডাটা এন্ট্রি</li>
+    <li>ওয়েব ডিজাইন</li>
+    <li>ভিডিও এডিটিং</li>
+    <li>গ্রাফিক ডিজাইন</li>
+    <li>SEO সার্ভিস</li>
+    <li>কন্টেন্ট রাইটিং</li>
+    <li>ওয়ার্ডপ্রেস ডেভেলপমেন্ট</li>
+  </ul>  <script>
+    function searchItems() {
+      const input = document.getElementById("searchBox").value.toLowerCase();
+      const items = document.querySelectorAll("#itemList li");
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script></body>
+</html>
