@@ -426,84 +426,48 @@ details p {
     }
       --main-color: #0d47a1;
     }
+    <!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 আমার ফিচার হাব</title>
+</head>
+    <style>
     body {
-      margin: 0;
-      font-family: 'Hind Siliguri', sans-serif;
-      background-color: #f4f4f4;
-      color: #222;
-      transition: background-color 0.3s, color 0.3s;
-    }
-    body.dark-mode {
-      background-color: #121212;
-      color: #f4f4f4;
-    }
-    header {
-      background-color: var(--main-color);
-      color: white;
-      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      padding: 40px 20px;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 28px;
+    h1 {
+      font-size: 32px;
+      color: #2d3436;
+      margin-bottom: 30px;
     }
-    section {
-      padding: 30px 20px;
-      max-width: 960px;
-      margin: auto;
-      background-color: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-top: 20px;
-    }
-    body.dark-mode section {
-      background-color: #1e1e1e;
-    }
-    section h2 {
-      color: var(--main-color);
-    }
-    .feature-list {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    .feature {
-      background: #e3f2fd;
-      padding: 15px;
+    .card {
+      background: #ffffff;
       border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .feature:hover {
-      background: #bbdefb;
-    }
-    body.dark-mode .feature {
-      background: #2a2a2a;
-    }
-    body.dark-mode .feature:hover {
-      background: #444;
-    }
-    .feature i {
-      font-size: 30px;
-      color: var(--main-color);
-      margin-bottom: 10px;
-    }
-    .back-btn {
-      display: inline-block;
-      margin-top: 30px;
-      background: var(--main-color);
-      color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
       text-decoration: none;
+      color: #2d3436;
     }
-    footer {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 14px;
-      color: #666;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    .card span {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 10px;
     }
 </style>
 <head>
@@ -752,44 +716,30 @@ details p {
     <img src="certificate.jpg" alt="Certificate">
   </section>
 
-<!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>সকল ফিচার | মানিকগঞ্জের বড় মিয়া</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6/dist/tippy.css">
-  
-<body>
-  <header>
-    <h1>📋 ওয়েবসাইটের সকল ফিচার</h1>
-  </header>
-
-  <section>
-    <h2>⚙️ কার্যকর বৈশিষ্ট্য</h2>
-    <div class="feature-list">
-      <div class="feature"><i class="fas fa-pencil-alt"></i><br>📝 Notes App</div>
-      <div class="feature"><i class="fas fa-id-card"></i><br>🧾 CV Viewer & Download</div>
-      <div class="feature"><i class="fas fa-comments"></i><br>💬 Live Chat</div>
-      <div class="feature"><i class="fas fa-folder-open"></i><br>📂 File View (Docs Style)</div>
-      <div class="feature"><i class="fas fa-cog"></i><br>🔧 Settings (Font/Theme)</div>
-      <div class="feature"><i class="fas fa-trash"></i><br>📋 Trash & Archive</div>
-      <div class="feature"><i class="fas fa-file-export"></i><br>📤 Export TXT/PDF</div>
-      <div class="feature"><i class="fas fa-brain"></i><br>🧠 AI Suggestion</div>
-      <div class="feature"><i class="fas fa-filter"></i><br>📊 Portfolio Filter</div>
-      <div class="feature"><i class="fas fa-clipboard"></i><br>📎 Copy to Clipboard</div>
-      <div class="feature"><i class="fas fa-search"></i><br>💡 Search Filter</div>
-    </div>
-
-    <a class="back-btn" href="index.html">← হোমে ফিরে যান</a>
-  </section>
-
-  <footer>
-    &copy; ২০২৫ মানিকগঞ্জের বড় মিয়া | সকল অধিকার সংরক্ষিত
-  </footer>
+  <title>📚 আমার ফিচার হাব</title>
+</head>
+<body>  <h1>📚 ফিচার হোম পেইজ</h1>  <div class="grid">
+    <a class="card" href="notes.html"><span>📝</span>নোটস</a>
+    <a class="card" href="cv.html"><span>🧾</span>সিভি</a>
+    <a class="card" href="livechat.html"><span>💬</span>লাইভ চ্যাট</a>
+    <a class="card" href="fileview.html"><span>📂</span>ফাইল ভিউ</a>
+    <a class="card" href="settings.html"><span>🔧</span>সেটিংস</a>
+    <a class="card" href="trash.html"><span>🗑️</span>আর্কাইভ / ট্র্যাশ</a>
+    <a class="card" href="export.html"><span>📤</span>এক্সপোর্ট</a>
+    <a class="card" href="ai.html"><span>🧠</span>AI সাজেশন</a>
+    <a class="card" href="portfolio.html"><span>📊</span>পোর্টফোলিও</a>
+    <a class="card" href="clipboard.html"><span>📎</span>ক্লিপবোর্ড</a>
+    <a class="card" href="search.html"><span>🔍</span>সার্চ</a>
+    <a class="card" href="terms.html"><span>📜</span>নীতি ও শর্তাবলী</a>
+    <a class="card" href="services.html"><span>✅</span>সার্ভিস সমূহ</a>
+    <a class="card" href="tutorials.html"><span>📚</span>টিউটোরিয়াল</a>
+  </div>
 </body>
+
   <!-- Social Media Buttons -->
   <section id="social">
     <h2>Follow Me</h2>
