@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📤 Export Notes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .export-container {
+      max-width: 600px;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+    }
+    .txt { background-color: #3498db; color: white; }
+    .pdf { background-color: #e74c3c; color: white; }
+  </style>
+</head>
+<body>
+  <h1>📤 এক্সপোর্ট করুন</h1>
+  <div class="export-container">
+    <label for="noteContent">✏️ আপনার নোট:</label>
+    <textarea id="noteContent" placeholder="এখানে আপনার নোট লিখুন বা কপি করুন..."></textarea>
+    <br>
+    <button class="txt" onclick="exportToTXT()">💾 Export as .TXT</button>
+    <button class="pdf" onclick="exportToPDF()">🖨️ Export as .PDF</button>
+  </div>
+
+  <script>
+    function exportToTXT() {
+      const content = document.getElementById("noteContent").value;
+      const blob = new Blob([content], { type: "text/plain" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "note.txt";
+      a.click();
+    }
+
+    function exportToPDF() {
+      const content = document.getElementById("noteContent").value;
+      const win = window.open('', '_blank');
+      win.document.write(`
+        <html><head><title>Note PDF</title></head><body>
+        <pre>${content.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</pre>
+        </body></html>`);
+      win.document.close();
+      win.focus();
+      win.print();
+    }
+  </script>
+</body>
+</html>
 
