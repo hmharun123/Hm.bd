@@ -1,204 +1,165 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🌟 আমার সব ফিচারসমূহ</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সব ফিচার | মানিকগঞ্জের বড় মিয়া</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplemde/dist/simplemde.min.css">
   <style>
     body {
       margin: 0;
-      font-family: sans-serif;
-      background: #f1f1f1;
-      color: #111;
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
     }
-    .container {
-      max-width: 960px;
-      margin: 30px auto;
+    header {
+      background-color: #0d47a1;
+      color: white;
       padding: 20px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    h1 {
       text-align: center;
-      margin-bottom: 20px;
-      color: #0d47a1;
     }
-    .features {
+    .section {
+      padding: 30px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    .feature-list {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
     .feature {
-      padding: 15px;
       background: #e3f2fd;
+      padding: 15px;
       border-radius: 10px;
       text-align: center;
       cursor: pointer;
-      transition: 0.3s;
     }
-    .feature:hover {
-      background: #bbdefb;
+    .feature-box {
+      display: none;
+      margin-top: 30px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    textarea, input[type="text"], input[type="password"] {
+    textarea, .input, .output, .list ul {
       width: 100%;
-      padding: 8px;
-      margin: 8px 0;
-      border-radius: 6px;
+      padding: 10px;
+      font-size: 16px;
       border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
-    button {
+    .btn {
       background: #0d47a1;
       color: white;
+      padding: 10px 20px;
       border: none;
-      padding: 8px 16px;
       border-radius: 6px;
-      margin-top: 10px;
       cursor: pointer;
     }
-    .output {
-      margin-top: 10px;
-      background: #f9f9f9;
+    .draggable {
       padding: 10px;
-      border-radius: 6px;
+      background: #bbdefb;
+      margin-bottom: 5px;
+      cursor: move;
     }
-    .hidden { display: none; }
-    .dark { background: #121212; color: #f4f4f4; }
-    .dark .feature { background: #2a2a2a; }
-    .dark .feature:hover { background: #444; 
+    .quill, .editor-toolbar, .CodeMirror {
+      margin-bottom: 20px;
     }
-    .cross-back {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  font-size: 28px;
-  color: #f44336;
-  text-decoration: none;
-  font-weight: bold;
-  background: #fff;
-  border-radius: 50%;
-  padding: 4px 10px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.2);
-}
-.cross-back:hover {
-  background: #f44336;
-  color: white;
-}
   </style>
-  <head>
-    <a href="index.html" class="cross-back" title="Back to Home">❌</a>
-  
 </head>
 <body>
-  <div class="container">
-    <h1>🔥 আমার সব ফিচারসমূহ</h1>
-
-    <div class="features">
-      <div class="feature" onclick="toggleDarkMode()"><i class="fas fa-moon"></i><br>ডার্ক মোড</div>
-      <div class="feature" onclick="copyToClipboard()"><i class="fas fa-copy"></i><br>কপি</div>
-      <div class="feature" onclick="downloadAsPDF()"><i class="fas fa-file-pdf"></i><br>PDF ডাউনলোড</div>
-      <div class="feature" onclick="saveNote()"><i class="fas fa-save"></i><br>সেভ</div>
-      <div class="feature" onclick="loadNote()"><i class="fas fa-folder-open"></i><br>লোড</div>
-      <div class="feature" onclick="clearNote()"><i class="fas fa-trash"></i><br>ক্লিয়ার</div>
-      <div class="feature" onclick="exportText()"><i class="fas fa-file-alt"></i><br>TXT</div>
-      <div class="feature" onclick="showPasswordLock()"><i class="fas fa-lock"></i><br>পাসওয়ার্ড লক</div>
-      <div class="feature" onclick="showCV()"><i class="fas fa-id-card"></i><br>CV</div>
-      <div class="feature" onclick="setReminder()"><i class="fas fa-bell"></i><br>রিমাইন্ডার</div>
-      <div class="feature" onclick="chatDemo()"><i class="fas fa-comments"></i><br>লাইভ চ্যাট</div>
-      <div class="feature" onclick="suggestAI()"><i class="fas fa-brain"></i><br>AI সাজেশন</div>
+  <header><h1>🌟 আমার সব ফিচারসমূহ (২৩টি)</h1></header>
+  <div class="section">
+    <div class="feature-list">
+      <div class="feature" onclick="showBox('dark')">🌙 Dark Mode</div>
+      <div class="feature" onclick="showBox('drag')">🔃 Drag Notes</div>
+      <div class="feature" onclick="showBox('lock')">🔐 Password Lock</div>
+      <div class="feature" onclick="showBox('timestamp')">🕓 Timestamp</div>
+      <div class="feature" onclick="showBox('markdown')">📝 Markdown Editor</div>
+      <div class="feature" onclick="showBox('richtext')">🅱️ Rich Text Editor</div>
+      <div class="feature" onclick="showBox('cv')">📄 CV Viewer</div>
+      <div class="feature" onclick="showBox('livechat')">💬 Live Chat</div>
+      <div class="feature" onclick="showBox('clipboard')">📋 Copy</div>
+      <div class="feature" onclick="showBox('pdfmerge')">📑 PDF Merge</div>
     </div>
 
-    <textarea id="note" placeholder="✍️ এখানে নোট লিখুন..."></textarea>
-
-    <div id="passwordBox" class="hidden">
-      <input type="password" id="passInput" placeholder="🔐 পাসওয়ার্ড দিন">
-      <button onclick="unlockNote()">Unlock</button>
-      <div id="passStatus"></div>
+    <div class="feature-box" id="dark">
+      <button class="btn" onclick="document.body.classList.toggle('dark')">🌙 Toggle Dark Mode</button>
     </div>
-
-    <div class="output" id="outputBox"></div>
-    <div style="margin-top: 10px;"><a href="assets/Md_Harun_Or_Rashid_CV_Image.pdf" download>📄 আমার সিভি ডাউনলোড করুন</a></div>
+    <div class="feature-box" id="drag">
+      <div id="dragContainer">
+        <div class="draggable" draggable="true">Note 1</div>
+        <div class="draggable" draggable="true">Note 2</div>
+      </div>
+    </div>
+    <div class="feature-box" id="lock">
+      <input type="password" id="notePass"><button class="btn" onclick="unlockNote()">Unlock</button><p id="lockMsg"></p>
+    </div>
+    <div class="feature-box" id="timestamp">🕓 Created: <span id="createdAt"></span></div>
+    <div class="feature-box" id="markdown">
+      <textarea id="markdownEditor"></textarea>
+    </div>
+    <div class="feature-box" id="richtext">
+      <div id="editor"></div>
+    </div>
+    <div class="feature-box" id="cv">
+      <embed src="assets/Md_Harun_Or_Rashid_CV_Image.pdf" width="100%" height="500px" type="application/pdf">
+    </div>
+    <div class="feature-box" id="livechat">
+      <iframe src="https://embed.tawk.to/6852e70485f8531915bbefad/1iu1tcr2f" width="100%" height="400" style="border:0;"></iframe>
+    </div>
+    <div class="feature-box" id="clipboard">
+      <textarea id="copyText">এই লেখাটি কপি করুন</textarea>
+      <button class="btn" onclick="copyToClipboard()">Copy</button>
+    </div>
+    <div class="feature-box" id="pdfmerge">
+      <p>📄 দুইটি PDF মিশানোর ফিচার ভবিষ্যতে যুক্ত হবে।</p>
+    </div>
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplemde/dist/simplemde.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quill/dist/quill.min.js"></script>
   <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark');
+    function showBox(id) {
+      document.querySelectorAll('.feature-box').forEach(e => e.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
     }
-
-    function copyToClipboard() {
-      const text = document.getElementById("note").value;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("✅ কপি হয়েছে!");
-      });
-    }
-
-    function downloadAsPDF() {
-      html2pdf().from(document.getElementById("note")).save("note.pdf");
-    }
-
-    function exportText() {
-      const text = document.getElementById("note").value;
-      const blob = new Blob([text], {type: "text/plain"});
-      const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = "note.txt";
-      link.click();
-    }
-
-    function saveNote() {
-      const note = document.getElementById("note").value;
-      localStorage.setItem("myNote", note);
-      alert("✅ নোট সেভ হয়েছে!");
-    }
-
-    function loadNote() {
-      const saved = localStorage.getItem("myNote");
-      if (saved) {
-        document.getElementById("note").value = saved;
-        alert("📂 লোড সম্পন্ন!");
-      } else {
-        alert("❌ কোনো সেভ করা নোট নেই");
-      }
-    }
-
-    function clearNote() {
-      document.getElementById("note").value = "";
-    }
-
-    function showPasswordLock() {
-      document.getElementById("passwordBox").classList.toggle("hidden");
-    }
-
     function unlockNote() {
-      const input = document.getElementById("passInput").value;
-      const status = document.getElementById("passStatus");
-      if (input === "1234") {
-        status.innerText = "✅ আনলক হয়েছে!";
-      } else {
-        status.innerText = "❌ ভুল পাসওয়ার্ড!";
-      }
+      const pass = document.getElementById('notePass').value;
+      document.getElementById('lockMsg').textContent = pass === '1234' ? 'Unlocked ✅' : 'Wrong ❌';
     }
-
-    function showCV() {
-      window.open("assets/Md_Harun_Or_Rashid_CV_Image.pdf", "_blank");
+    function copyToClipboard() {
+      const text = document.getElementById("copyText").value;
+      navigator.clipboard.writeText(text).then(() => alert("Copied!"));
     }
-
-    function setReminder() {
-      alert("⏰ রিমাইন্ডার ফিচার আসছে শীঘ্রই...");
-    }
-
-    function chatDemo() {
-      alert("https://embed.tawk.to/6852e70485f8531915bbefad/1iu1tcr2f");
-    }
-
-    function suggestAI() {
-      const demo = ["আজকের কাজ: টিকটক ভিডিও রেকর্ড", "গ্রাহকের অর্ডার চেক", "সিভি আপডেট"];
-      const random = demo[Math.floor(Math.random() * demo.length)];
-      document.getElementById("outputBox").innerText = `🤖 AI সাজেশন: ${random}`;
+    document.querySelectorAll('.draggable').forEach(el => {
+      el.addEventListener('dragstart', e => {
+        e.dataTransfer.setData('text/plain', e.target.textContent);
+      });
+      el.addEventListener('dragover', e => e.preventDefault());
+      el.addEventListener('drop', e => {
+        e.preventDefault();
+        const data = e.dataTransfer.getData('text');
+        const dropTarget = e.target;
+        const dragEl = Array.from(document.querySelectorAll('.draggable')).find(el => el.textContent === data);
+        if (dragEl && dropTarget !== dragEl) {
+          dropTarget.parentNode.insertBefore(dragEl, dropTarget);
+        }
+      });
+    });
+    const simplemde = new SimpleMDE({ element: document.getElementById("markdownEditor") });
+    const quill = new Quill('#editor', { theme: 'snow' });
+    window.onload = () => {
+      document.getElementById('createdAt').textContent = new Date().toLocaleString();
     }
   </script>
 </body>
 </html>
+
+
+      
