@@ -71,6 +71,172 @@
     .quill, .editor-toolbar, .CodeMirror {
       margin-bottom: 20px;
     }
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>সব ফিচার | মানিকগঞ্জের বড় মিয়া</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --main-color: #0d47a1; }
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+    }
+    body.dark-mode { background-color: #121212; color: #f4f4f4; }
+    header { background-color: var(--main-color); color: white; padding: 20px; text-align: center; }
+    section {
+      padding: 30px 20px;
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
+      border-radius: 12px;
+      margin-top: 20px;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .feature {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .hidden-box { display: none; margin-top: 30px; }
+    .textarea, .preview, .output, .list ul, .input {
+      width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc;
+      border-radius: 6px; margin-bottom: 10px;
+    }
+    .preview, .output { background: #f9f9f9; white-space: pre-wrap; }
+    .list ul { list-style: none; padding: 0; }
+    .list li { margin-bottom: 10px; background: #ddd; padding: 8px; border-radius: 6px; cursor: pointer; }
+    .list li.pinned { background: gold; }
+  </style>
+</head>
+<body>
+  <header><h1>🌟 আমার সব ফিচারসমূহ</h1></header>
+  <section>
+    <h2>🔥 কার্যকর ফিচার</h2>
+    <div class="feature-list">
+      <div class="feature" onclick="toggleDarkMode()"><i class="fas fa-moon"></i><br>ডার্ক মোড</div>
+      <div class="feature" onclick="showBox('theme')"><i class="fas fa-palette"></i><br>Color Picker</div>
+      <div class="feature" onclick="showBox('pdfmerge')"><i class="fas fa-file-pdf"></i><br>PDF Merge</div>
+      <div class="feature" onclick="showBox('reminder')"><i class="fas fa-bell"></i><br>Reminder</div>
+      <div class="feature" onclick="showBox('reorder')"><i class="fas fa-arrows-alt"></i><br>Drag & Drop</div>
+      <div class="feature" onclick="showBox('lock')"><i class="fas fa-lock"></i><br>Password Lock</div>
+      <div class="feature" onclick="showBox('timestamp')"><i class="fas fa-clock"></i><br>Timestamp</div>
+      <div class="feature" onclick="showBox('daily')"><i class="fas fa-calendar-day"></i><br>Daily Notes</div>
+      <div class="feature" onclick="showBox('attach')"><i class="fas fa-paperclip"></i><br>Attach Files</div>
+      <div class="feature" onclick="showBox('importExport')"><i class="fas fa-file-export"></i><br>Import/Export JSON</div>
+      <div class="feature" onclick="showBox('autosave')"><i class="fas fa-save"></i><br>Auto-Save</div>
+      <div class="feature" onclick="showBox('zip')"><i class="fas fa-file-archive"></i><br>Download ZIP</div>
+    </div>
+
+    <div id="theme" class="hidden-box">
+      <h3>🎨 Color Picker</h3>
+      <input type="color" onchange="document.body.style.backgroundColor=this.value">
+    </div>
+
+    <div id="pdfmerge" class="hidden-box">
+      <h3>🧾 PDF Merge</h3>
+      <p>ডেমো: <a href="#">merge-pdfs.html</a> (এই ফিচার পরবর্তীতে যুক্ত হবে)</p>
+    </div>
+
+    <div id="reminder" class="hidden-box">
+      <h3>⏰ Reminder</h3>
+      <input type="time" id="reminderTime">
+      <button onclick="setReminder()">Set Reminder</button>
+      <p id="reminderMsg"></p>
+    </div>
+
+    <div id="reorder" class="hidden-box">
+      <h3>🔃 Drag & Drop Notes</h3>
+      <ul id="noteList" class="list" ondragover="event.preventDefault()"></ul>
+    </div>
+
+    <div id="lock" class="hidden-box">
+      <h3>🔐 Password Lock</h3>
+      <input type="password" id="notePass" placeholder="Enter Password">
+      <button onclick="unlockNote()">Unlock</button>
+      <p id="lockMsg"></p>
+    </div>
+    <div id="timestamp" class="hidden-box">
+      <h3>⏰ Timestamp</h3>
+      <p>Created at: <span id="createdAt"></span></p>
+    </div>
+    <div id="daily" class="hidden-box">
+      <h3>📅 Daily Notes</h3>
+      <textarea id="dailyText" class="textarea" placeholder="Write today's note..."></textarea>
+    </div>
+    <div id="attach" class="hidden-box">
+      <h3>📎 Attach Files</h3>
+      <input type="file" multiple>
+    </div>
+    <div id="importExport" class="hidden-box">
+      <h3>📤 Import/Export JSON</h3>
+      <button onclick="exportJSON()">Export JSON</button>
+      <input type="file" accept="application/json" onchange="importJSON(event)">
+    </div>
+    <div id="autosave" class="hidden-box">
+      <h3>🔁 Auto-Save</h3>
+      <textarea id="autosaveText" class="textarea" placeholder="Auto saving..."></textarea>
+      <p id="autosaveMsg"></p>
+    </div>
+    <div id="zip" class="hidden-box">
+      <h3>📦 Download All Notes ZIP</h3>
+      <button onclick="alert('ZIP download coming soon...')">Download</button>
+    </div>
+  </section>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    function showBox(id) {
+      document.querySelectorAll('.hidden-box').forEach(box => box.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function setReminder() {
+      const t = document.getElementById('reminderTime').value;
+      document.getElementById('reminderMsg').textContent = `Reminder set for ${t}`;
+    }
+    function unlockNote() {
+      const pass = document.getElementById('notePass').value;
+      document.getElementById('lockMsg').textContent = pass === '1234' ? 'Unlocked ✅' : 'Wrong Password ❌';
+    }
+    document.getElementById('createdAt') && (document.getElementById('createdAt').textContent = new Date().toLocaleString());
+    document.getElementById('autosaveText')?.addEventListener('input', () => {
+      localStorage.setItem('autosave_note', document.getElementById('autosaveText').value);
+      document.getElementById('autosaveMsg').textContent = '✅ Saved at ' + new Date().toLocaleTimeString();
+    });
+    function exportJSON() {
+      const data = { notes: Object.entries(localStorage) };
+      const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'notes.json';
+      a.click();
+    }
+    function importJSON(e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        const data = JSON.parse(reader.result);
+        data.notes.forEach(([k, v]) => localStorage.setItem(k, v));
+        alert('✅ Notes imported successfully!');
+      };
+      reader.readAsText(file);
+    }
+  </script>
+</body>
+</html>
+
   </style>
 </head>
 <body>
@@ -87,8 +253,20 @@
       <div class="feature" onclick="showBox('livechat')">💬 Live Chat</div>
       <div class="feature" onclick="showBox('clipboard')">📋 Copy</div>
       <div class="feature" onclick="showBox('pdfmerge')">📑 PDF Merge</div>
+      <div class="feature" onclick="showBox('theme')"><i class="fas fa-palette"></i><br>Color Picker</div>
+      <div class="feature" onclick="toggleDarkMode()"><i class="fas fa-moon"></i><br>ডার্ক মোড</div>
+      <div class="feature" onclick="showBox('pdfmerge')"><i class="fas fa-file-pdf"></i><br>PDF Merge</div>
+      <div class="feature" onclick="showBox('reminder')"><i class="fas fa-bell"></i><br>Reminder</div>
+      <div class="feature" onclick="showBox('reorder')"><i class="fas fa-arrows-alt"></i><br>Drag & Drop</div>
+      <div class="feature" onclick="showBox('lock')"><i class="fas fa-lock"></i><br>Password Lock</div>
+      <div class="feature" onclick="showBox('timestamp')"><i class="fas fa-clock"></i><br>Timestamp</div>
+      <div class="feature" onclick="showBox('daily')"><i class="fas fa-calendar-day"></i><br>Daily Notes</div>
+      <div class="feature" onclick="showBox('attach')"><i class="fas fa-paperclip"></i><br>Attach Files</div>
+      <div class="feature" onclick="showBox('importExport')"><i class="fas fa-file-export"></i><br>Import/Export JSON</div>
+      <div class="feature" onclick="showBox('autosave')"><i class="fas fa-save"></i><br>Auto-Save</div>
+      <div class="feature" onclick="showBox('zip')"><i class="fas fa-file-archive"></i><br>Download ZIP</div>
     </div>
-
+  
     <div class="feature-box" id="dark">
       <button class="btn" onclick="document.body.classList.toggle('dark')">🌙 Toggle Dark Mode</button>
     </div>
@@ -97,7 +275,7 @@
         <div class="draggable" draggable="true">Note 1</div>
         <div class="draggable" draggable="true">Note 2</div>
       </div>
-    </div>
+    
     <div class="feature-box" id="lock">
       <input type="password" id="notePass"><button class="btn" onclick="unlockNote()">Unlock</button><p id="lockMsg"></p>
     </div>
@@ -121,7 +299,100 @@
     <div class="feature-box" id="pdfmerge">
       <p>📄 দুইটি PDF মিশানোর ফিচার ভবিষ্যতে যুক্ত হবে।</p>
     </div>
-  </div>
+  <div id="theme" class="hidden-box">
+      <h3>🎨 Color Picker</h3>
+      <input type="color" onchange="document.body.style.backgroundColor=this.value">
+    </div>
+
+    <div id="pdfmerge" class="hidden-box">
+      <h3>🧾 PDF Merge</h3>
+      <p>ডেমো: <a href="#">merge-pdfs.html</a> (এই ফিচার পরবর্তীতে যুক্ত হবে)</p>
+    </div>
+
+    <div id="reminder" class="hidden-box">
+      <h3>⏰ Reminder</h3>
+      <input type="time" id="reminderTime">
+      <button onclick="setReminder()">Set Reminder</button>
+      <p id="reminderMsg"></p>
+    </div>
+
+    <div id="reorder" class="hidden-box">
+      <h3>🔃 Drag & Drop Notes</h3>
+      <ul id="noteList" class="list" ondragover="event.preventDefault()"></ul>
+    </div>
+
+    <div id="lock" class="hidden-box">
+      <h3>🔐 Password Lock</h3>
+      <input type="password" id="notePass" placeholder="Enter Password">
+      <button onclick="unlockNote()">Unlock</button>
+      <p id="lockMsg"></p>
+    </div>
+    <div id="timestamp" class="hidden-box">
+      <h3>⏰ Timestamp</h3>
+      <p>Created at: <span id="createdAt"></span></p>
+    </div>
+    <div id="daily" class="hidden-box">
+      <h3>📅 Daily Notes</h3>
+      <textarea id="dailyText" class="textarea" placeholder="Write today's note..."></textarea>
+    </div>
+    <div id="attach" class="hidden-box">
+      <h3>📎 Attach Files</h3>
+      <input type="file" multiple>
+    </div>
+    <div id="importExport" class="hidden-box">
+      <h3>📤 Import/Export JSON</h3>
+      <button onclick="exportJSON()">Export JSON</button>
+      <input type="file" accept="application/json" onchange="importJSON(event)">
+    </div>
+    <div id="autosave" class="hidden-box">
+      <h3>🔁 Auto-Save</h3>
+      <textarea id="autosaveText" class="textarea" placeholder="Auto saving..."></textarea>
+      <p id="autosaveMsg"></p>
+    </div>
+    <div id="zip" class="hidden-box">
+      <h3>📦 Download All Notes ZIP</h3>
+      <button onclick="alert('ZIP download coming soon...')">Download</button>
+    </div>
+  </section>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+    }
+    function showBox(id) {
+      document.querySelectorAll('.hidden-box').forEach(box => box.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function setReminder() {
+      const t = document.getElementById('reminderTime').value;
+      document.getElementById('reminderMsg').textContent = `Reminder set for ${t}`;
+    }
+    function unlockNote() {
+      const pass = document.getElementById('notePass').value;
+      document.getElementById('lockMsg').textContent = pass === '1234' ? 'Unlocked ✅' : 'Wrong Password ❌';
+    }
+    document.getElementById('createdAt') && (document.getElementById('createdAt').textContent = new Date().toLocaleString());
+    document.getElementById('autosaveText')?.addEventListener('input', () => {
+      localStorage.setItem('autosave_note', document.getElementById('autosaveText').value);
+      document.getElementById('autosaveMsg').textContent = '✅ Saved at ' + new Date().toLocaleTimeString();
+    });
+    function exportJSON() {
+      const data = { notes: Object.entries(localStorage) };
+      const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'notes.json';
+      a.click();
+    }
+    function importJSON(e) {
+      const file = e.target.files[0];
+      const reader = new FileReader();
+      reader.onload = () => {
+        const data = JSON.parse(reader.result);
+        data.notes.forEach(([k, v]) => localStorage.setItem(k, v));
+        alert('✅ Notes imported successfully!');
+      };
+      reader.readAsText(file);
+    }
   <script src="https://cdn.jsdelivr.net/npm/simplemde/dist/simplemde.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/quill/dist/quill.min.js"></script>
   <script>
