@@ -58,6 +58,72 @@
       border-radius: 6px;
       text-decoration: none;
     }
+    <!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features | মানিকগঞ্জের বড় মিয়া</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/simplemde/dist/simplemde.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/quill/dist/quill.snow.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f4f4f4;
+      color: #222;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      background: #0d47a1;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .feature {
+      background: #e3f2fd;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: center;
+    }
+    .hidden-box {
+      display: none;
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .textarea, .input, .output {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .btn {
+      background: #0d47a1;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .back-btn {
+      display: block;
+      margin: 20px auto 0;
+      text-align: center;
+      color: #0d47a1;
+      text-decoration: none;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
@@ -116,7 +182,113 @@
     <div id="tag" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🗂️ Category/Tags</h3><p>আসছে শীঘ্রই...</p></div>
 
   </div>
+<body>
+  <header>
+    <h1>📋 ফিচার তালিকা</h1>
+  </header>  <div class="feature-list">
+    <div class="feature" onclick="toggleDarkMode()">🌙 ডার্ক মোড</div>
+    <div class="feature" onclick="showBox('editor')">🅱️ Rich Text Editor</div>
+    <div class="feature" onclick="showBox('markdown')">🧾 Markdown Editor</div>
+    <div class="feature" onclick="showBox('copy')">📋 Copy to Clipboard</div>
+    <div class="feature" onclick="showBox('password')">🔐 পাসওয়ার্ড লক</div>
+    <div class="feature" onclick="showBox('json')">📥 Export/Import</div>
+    <div class="feature" onclick="showBox('timestamp')">🕓 Timestamp</div>
+    <div class="feature" onclick="showBox('cv')">📄 CV Viewer</div>
+    <div class="feature" onclick="showBox('ai')">🤖 AI Notes (Demo)</div>
+    <div class="feature" onclick="showBox('reminder')">⏰ Reminder</div>
+  </div>  <div id="editor" class="hidden-box">
+    <h3>🅱️ Rich Text Editor</h3>
+    <div id="quillEditor"></div>
+  </div>  <div id="markdown" class="hidden-box">
+    <h3>🧾 Markdown Editor</h3>
+    <textarea id="markdownArea"></textarea>
+  </div>  <div id="copy" class="hidden-box">
+    <h3>📋 Copy</h3>
+    <textarea id="copyText">এই লেখাটি কপি করুন</textarea>
+    <button class="btn" onclick="copyText()">Copy</button>
+  </div>  <div id="password" class="hidden-box">
+    <h3>🔐 পাসওয়ার্ড লক</h3>
+    <input type="password" id="pass" placeholder="Enter password">
+    <button class="btn" onclick="checkPass()">Unlock</button>
+    <p id="lockMsg"></p>
+  </div>  <div id="json" class="hidden-box">
+    <h3>📥 Export/Import JSON</h3>
+    <button onclick="exportNotes()">Export</button>
+    <input type="file" accept="application/json" onchange="importNotes(event)">
+  </div>  <div id="timestamp" class="hidden-box">
+    <h3>🕓 Timestamp</h3>
+    <p id="timeText"></p>
+  </div>  <div id="cv" class="hidden-box">
+    <h3>📄 CV Viewer</h3>
+    <iframe src="assets/Md_Harun_Or_Rashid_CV_Image.pdf" width="100%" height="400"></iframe>
+  </div>  <div id="ai" class="hidden-box">
+    <h3>🤖 AI Suggested Notes</h3>
+    <ul>
+      <li>🌱 আজকের লক্ষ্য লিখুন</li>
+      <li>📌 জরুরি টাস্ক লিস্ট তৈরি করুন</li>
+    </ul>
+  </div>  <div id="reminder" class="hidden-box">
+    <h3>⏰ Reminder</h3>
+    <input type="time" id="reminderTime">
+    <button class="btn" onclick="setReminder()">Set</button>
+    <p id="reminderMsg"></p>
+  </div><a class="back-btn" href="index.html">🔙 হোমে ফিরে যান</a>
 
+  <!-- Scripts -->  <script src="https://cdn.jsdelivr.net/npm/quill/dist/quill.min.js"></script>  <script src="https://cdn.jsdelivr.net/npm/simplemde/dist/simplemde.min.js"></script>  <script>
+    const quill = new Quill('#quillEditor', { theme: 'snow' });
+    const simplemde = new SimpleMDE({ element: document.getElementById("markdownArea") });
+    function showBox(id) {
+      document.querySelectorAll('.hidden-box').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark');
+    }
+    function copyText() {
+      const t = document.getElementById("copyText");
+      t.select();
+      document.execCommand("copy");
+      alert("Copied!");
+    }
+    function checkPass() {
+      const pass = document.getElementById("pass").value;
+      document.getElementById("lockMsg").textContent = pass === "1234" ? "✅ Unlock Success" : "❌ ভুল পাসওয়ার্ড";
+    }
+    function exportNotes() {
+      const notes = { data: Object.entries(localStorage) };
+      const blob = new Blob([JSON.stringify(notes)], { type: "application/json" });
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "notes.json";
+      a.click();
+    }
+    function importNotes(event) {
+      const reader = new FileReader();
+      reader.onload = () => {
+        const imported = JSON.parse(reader.result);
+        imported.data.forEach(([k, v]) => localStorage.setItem(k, v));
+        alert("✅ Import complete");
+      };
+      reader.readAsText(event.target.files[0]);
+    }
+    function setReminder() {
+      const t = document.getElementById("reminderTime").value;
+      document.getElementById("reminderMsg").textContent = `⏰ Reminder set for ${t}`;
+    }
+    window.onload = () => {
+      document.getElementById("timeText").textContent = new Date().toLocaleString();
+    }
+  </script>  <!-- Live Chat (Tawk.to) -->  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/6852e70485f8531915bbefad/1iu1tcr2f';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
   <script>
     function showFeature(id) {
       document.querySelectorAll('.hidden-section').forEach(el => el.style.display = 'none');
