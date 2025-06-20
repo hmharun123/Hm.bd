@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 সব ফিচারসমূহ | মানিকগঞ্জের বড় মিয়া</title>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Hind Siliguri', sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
+    header {
+      background: #0d47a1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .feature {
+      background: #e3f2fd;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .feature:hover {
+      background: #bbdefb;
+    }
+    .hidden-section {
+      display: none;
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 10px;
+      background: crimson;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌟 সব ফিচারসমূহ</h1>
+  </header>
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature" onclick="showFeature('fileui')">📁 ফাইল UI</div>
+      <div class="feature" onclick="showFeature('newnote')">📝 নতুন নোট</div>
+      <div class="feature" onclick="showFeature('lock')">🔐 পাসওয়ার্ড লক</div>
+      <div class="feature" onclick="showFeature('dark')">🌙 ডার্ক মোড</div>
+      <div class="feature" onclick="showFeature('importexport')">📥 Export/Import</div>
+      <div class="feature" onclick="showFeature('pdf')">📄 Export PDF/TXT</div>
+      <div class="feature" onclick="showFeature('trash')">🗑️ Trash</div>
+      <div class="feature" onclick="showFeature('copy')">📋 Copy</div>
+      <div class="feature" onclick="showFeature('ai')">🤖 AI Suggestion</div>
+      <div class="feature" onclick="showFeature('richtext')">🅱️ Rich Text</div>
+      <div class="feature" onclick="showFeature('markdown')">🧾 Markdown</div>
+      <div class="feature" onclick="showFeature('timestamp')">🕓 Timestamp</div>
+      <div class="feature" onclick="showFeature('reminder')">⏰ Reminder</div>
+      <div class="feature" onclick="showFeature('color')">🎨 Color Picker</div>
+      <div class="feature" onclick="showFeature('autosave')">🔁 Auto Save</div>
+      <div class="feature" onclick="showFeature('drag')">🔃 Drag/Drop</div>
+      <div class="feature" onclick="showFeature('attach')">📎 Attach</div>
+      <div class="feature" onclick="showFeature('back')">🔙 Back Button</div>
+      <div class="feature" onclick="showFeature('cv')">🖼️ CV Viewer</div>
+      <div class="feature" onclick="showFeature('chat')">💬 Live Chat</div>
+      <div class="feature" onclick="showFeature('zip')">📦 Download ZIP</div>
+      <div class="feature" onclick="showFeature('tag')">🗂️ Tag Support</div>
+    </div>
+
+    <!-- ২৪টি Hidden Sections -->
+    <div id="fileui" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📁 ফাইল UI (Demo)</h3><p>নোট ফাইল লিস্ট এখানে শো করবে।</p></div>
+    <div id="newnote" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📝 নতুন নোট</h3><textarea placeholder="নতুন নোট লিখুন..."></textarea></div>
+    <div id="lock" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🔐 পাসওয়ার্ড লক</h3><input type="password" placeholder="পাসওয়ার্ড"></div>
+    <div id="dark" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🌙 ডার্ক মোড</h3><button onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button></div>
+    <div id="importexport" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📥 Export/Import</h3><p>JSON ফাইল Import/Export</p></div>
+    <div id="pdf" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📄 Export PDF/TXT</h3><p>নোট PDF বা TXT এ রূপান্তর।</p></div>
+    <div id="trash" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🗑️ Trash/Archive</h3><p>ডিলিটকৃত নোট গুলো এখানে থাকবে।</p></div>
+    <div id="copy" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📋 Copy</h3><textarea id="copyText">এই লেখাটি কপি করুন</textarea><button onclick="navigator.clipboard.writeText(document.getElementById('copyText').value)">Copy</button></div>
+    <div id="ai" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🤖 AI Suggested Notes</h3><p>আপনার কাজের উপর ভিত্তি করে সাজেশন আসবে।</p></div>
+    <div id="richtext" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🅱️ Rich Text Editor</h3><p>[Demo Rich Text Editor]</p></div>
+    <div id="markdown" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🧾 Markdown Editor</h3><p>[Markdown লেখার সুবিধা]</p></div>
+    <div id="timestamp" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🕓 Timestamp</h3><p>Created: <span id="time">--</span></p></div>
+    <div id="reminder" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>⏰ Reminder</h3><input type="time"></div>
+    <div id="color" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🎨 Color Picker</h3><input type="color" onchange="document.body.style.backgroundColor = this.value">
+    </div>
+    <div id="autosave" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🔁 Auto Save</h3><textarea placeholder="Auto save enabled"></textarea></div>
+    <div id="drag" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🔃 Drag and Drop</h3><p>ড্র্যাগ করে নোট অর্ডার পরিবর্তন করুন</p></div>
+    <div id="attach" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📎 Attach Files</h3><input type="file" multiple></div>
+    <div id="back" class="hidden-section"><a class="back-btn" href="index.html">🏠 হোমে ফিরে যান</a></div>
+    <div id="cv" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📄 CV Viewer</h3><embed src="assets/Md_Harun_Or_Rashid_CV_Image.pdf" type="application/pdf" width="100%" height="400"></div>
+    <div id="chat" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>💬 Live Chat</h3><iframe src="https://embed.tawk.to/YOUR_ID" width="100%" height="400" frameborder="0"></iframe></div>
+    <div id="zip" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>📦 Download ZIP</h3><p>[ডেমো ZIP ডাউনলোড]</p></div>
+    <div id="tag" class="hidden-section"><a class="back-btn" onclick="goBack()">✖ Back</a><h3>🗂️ Category/Tags</h3><p>আসছে শীঘ্রই...</p></div>
+
+  </div>
+
+  <script>
+    function showFeature(id) {
+      document.querySelectorAll('.hidden-section').forEach(el => el.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+    function goBack() {
+      document.querySelectorAll('.hidden-section').forEach(el => el.style.display = 'none');
+    }
+    window.onload = () => {
+      if(document.getElementById('time')) {
+        document.getElementById('time').textContent = new Date().toLocaleString();
+      }
+    }
+  </script>
+</body>
+</html>
 
