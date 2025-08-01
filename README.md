@@ -690,7 +690,7 @@ details p {
   <section id="videos">
     <h2>📽️ My Videos</h2>
     <div class="video-container">
-      <iframe src="https://www.tiktok.com/embed/@user6071584366187/" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.tiktok.cembed/tiktok.com/@manikganjer_boro_mia/" frameborder="0" allowfullscreen></iframe>
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
