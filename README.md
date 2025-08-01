@@ -702,8 +702,7 @@ details p {
         style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
       </iframe>
     </div>
-
-    <!-- YouTube Embed -->
+ <!-- YouTube Embed -->
     <div style="flex: 1 1 300px; max-width: 500px;">
       <iframe 
         src="https://www.youtube.com/embed?listType=user_uploads&list=mdharun-n6j" 
