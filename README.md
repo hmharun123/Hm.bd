@@ -687,13 +687,35 @@ details p {
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
    <!-- Embedded TikTok & YouTube -->
-  <section id="videos">
-    <h2>📽️ My Videos</h2>
-    <div class="video-container">
-      <iframe src="https://www.tiktok.cembed/tiktok.com/@manikganjer_boro_mia/" frameborder="0" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/ https://youtube.com/@mdharun-n6j?si=72tDGjBE5ApgMgA_ " frameborder="0" allowfullscreen></iframe>
+<section id="videos" style="padding: 40px 20px; background-color: #f9f9f9;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">📽️ My Videos</h2>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    <!-- TikTok Embed -->
+    <div style="flex: 1 1 300px; max-width: 500px;">
+      <iframe 
+        src="https://www.tiktok.com/embed/@manikganjer_boro_mia" 
+        width="100%" height="500" 
+        frameborder="0" 
+        allowfullscreen
+        allow="autoplay; encrypted-media"
+        style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      </iframe>
     </div>
-  </section>
+
+    <!-- YouTube Embed -->
+    <div style="flex: 1 1 300px; max-width: 500px;">
+      <iframe 
+        src="https://www.youtube.com/embed?listType=user_uploads&list=mdharun-n6j" 
+        width="100%" height="500" 
+        frameborder="0" 
+        allowfullscreen
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        style="border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+      </iframe>
+    </div>
+  </div>
+</section>
 
   <!-- Gallery Link -->
   <section id="gallery">
